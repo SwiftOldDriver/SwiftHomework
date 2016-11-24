@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     @IBOutlet weak var labMyCurrentLocation: UILabel!
     
@@ -38,6 +38,8 @@ class ViewController: UIViewController {
     }
 }
 
+
+// CLLocationManagerDelegate
 extension ViewController : CLLocationManagerDelegate {
     
     
