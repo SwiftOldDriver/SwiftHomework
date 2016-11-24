@@ -19,14 +19,13 @@ class ViewController: UIViewController {
 	// MARK: - variable
 	
 	var counter = 0.0
-	var timer = Optional.some(Timer())
+	var timer:Timer? = Timer()
 	
 	// MARK: - life cycle
 	
 	override func viewDidLoad() {
 		
 		super.viewDidLoad()
-		
 		reset()
 	}
 	
@@ -52,20 +51,18 @@ class ViewController: UIViewController {
 	@IBAction func pauseButtonDidTouch(_ sender: UIButton) {
 		
 		resetTimer()
-		
 		switchButtonEnable()
 	}
 	
 	func updateTimer() {
 		
 		counter += 0.1
-		
 		timeLabel.text = String(format: "%.1f", counter)
 	}
 	
 	// MARK: - private method
 
-	func reset() {
+	private func reset() {
 		
 		resetTimer()
 		counter = 0
@@ -77,7 +74,7 @@ class ViewController: UIViewController {
 	}
 	
 	
-	func resetTimer() {
+	private func resetTimer() {
 		
 		if let timer = timer , timer.isValid {
 			timer.invalidate()
@@ -85,7 +82,7 @@ class ViewController: UIViewController {
 		}
 	}
 	
-	func switchButtonEnable() {
+	private func switchButtonEnable() {
 		
 		pauseBtn.isEnabled = !pauseBtn.isEnabled
 		playBtn.isEnabled  = !playBtn.isEnabled
