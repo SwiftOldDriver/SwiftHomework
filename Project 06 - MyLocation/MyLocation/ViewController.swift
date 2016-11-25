@@ -33,7 +33,7 @@ final class ViewController: UIViewController {
 }
 
 // CLLocationManagerDelegate
-extension ViewController : CLLocationManagerDelegate {
+extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
          labMyCurrentLocation.text = "Error while updating location " + error.localizedDescription
