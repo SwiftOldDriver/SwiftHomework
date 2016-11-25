@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func changeFontDidTouch(_ sender: AnyObject) {
         fontRowIndex = (fontRowIndex + 1) % 5
         print(fontNames[fontRowIndex])
-        self.title = fontNames[fontRowIndex]
+        title = fontNames[fontRowIndex]
         fontTableView.reloadData()
     }
     
@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = fontNames[fontRowIndex]
+        title = fontNames[fontRowIndex]
         
         fontTableView.dataSource = self
         fontTableView.delegate = self
@@ -75,7 +75,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.textLabel?.text = text
         cell.textLabel?.textColor = UIColor.white
-        cell.textLabel?.font = UIFont(name:self.fontNames[fontRowIndex], size:16)
+        cell.textLabel?.font = UIFont(name:fontNames[fontRowIndex], size:16)
         
         return cell
     }
