@@ -1,5 +1,5 @@
 //
-//  CameraView.swift
+//  CameraViewController.swift
 //  Snapchat Menu
 //
 //  Created by Jiar on 2016/11/24.
@@ -9,13 +9,13 @@
 import UIKit
 import AVFoundation
 
-class CameraView: UIViewController, UIGestureRecognizerDelegate {
+class CameraViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet private weak var cameraView: UIView!
     @IBOutlet private weak var tempImageView: UIImageView!
     
     private var captureSession: AVCaptureSession?
-    private var stillImageOutput: AVCaptureStillImageOutput? //New Api: AVCapturePhotoOutput
+    private var stillImageOutput: AVCaptureStillImageOutput?
     private var previewLayer: AVCaptureVideoPreviewLayer?
     
     private var didTakePhoto = false
@@ -23,6 +23,7 @@ class CameraView: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configRecognizer()
+        configCamera()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,7 +32,6 @@ class CameraView: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configCamera()
     }
     
     private func configRecognizer() {
@@ -40,8 +40,18 @@ class CameraView: UIViewController, UIGestureRecognizerDelegate {
         view.addGestureRecognizer(gesture)
     }
     
+    func didPressTakeAnother() {
+        if didTakePhoto {
+            tempImageView.isHidden = true
+            didTakePhoto = false
+        } else {
+            captureSession?.startRunning()
+            didTakePhoto = true
+            didPressTakePhoto()
+        }
+    }
+    
     private func configCamera() {
-        
         if !isCameraAvailable() {
             print("该设备没有摄像头")
             return
@@ -54,25 +64,20 @@ class CameraView: UIViewController, UIGestureRecognizerDelegate {
             print("该设备前摄像头无法使用")
             return
         }
-        
         captureSession = AVCaptureSession()
         captureSession!.sessionPreset = AVCaptureSessionPreset1920x1080
-        
         let backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         var input: AVCaptureDeviceInput!
-        
         do {
             input = try AVCaptureDeviceInput(device: backCamera)
         } catch let error {
             print("error: \(error)")
             return
         }
-        
         if captureSession!.canAddInput(input) {
             captureSession!.addInput(input)
             stillImageOutput = AVCaptureStillImageOutput()
             stillImageOutput!.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
-            
             if captureSession!.canAddOutput(stillImageOutput) {
                 captureSession!.addOutput(stillImageOutput)
                 previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -82,63 +87,27 @@ class CameraView: UIViewController, UIGestureRecognizerDelegate {
                 cameraView.layer.addSublayer(previewLayer!)
                 captureSession!.startRunning()
             }
-            
         }
     }
     
     private func didPressTakePhoto() {
-        
         if let stillImageOutput = stillImageOutput {
             if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo) {
                 videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
                 stillImageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: {
                     (sampleBuffer, error) in
-                    
                     if let sampleBuffer = sampleBuffer {
                         let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                         if let dataProvider  = CGDataProvider(data: imageData as! CFData) {
                             if let cgImageRef = CGImage(jpegDataProviderSource: dataProvider, decode: nil, shouldInterpolate: true, intent: .relativeColorimetric) {
-                                let image = UIImage(cgImage: cgImageRef, scale: 1.0, orientation: .right)
-                                self.tempImageView.image = image
+                                self.tempImageView.image = UIImage(cgImage: cgImageRef, scale: 1.0, orientation: .right)
                                 self.tempImageView.isHidden = false
-                                self.saveImageToPhotosAlbum(image)
                             }
                         }
                     }
-                    
                 })
             }
         }
-        
-    }
-    
-    @objc private func didPressTakeAnother() {
-        
-        if didTakePhoto {
-            tempImageView.isHidden = true
-            didTakePhoto = false
-        } else {
-            captureSession?.startRunning()
-            didTakePhoto = true
-            didPressTakePhoto()
-        }
-        
-    }
-    
-    private func saveImageToPhotosAlbum(_ image: UIImage) {
-        
-        let alert = UIAlertController(title: "温馨提示", message: "您需要保存该照片到相册吗？", preferredStyle: .alert)
-        let saveAction = UIAlertAction(title: "保存", style: .default, handler: { (action) in
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-            self.didPressTakeAnother()
-        })
-        let cancelAction = UIAlertAction(title: "不了", style: .cancel, handler: { (action) in
-            self.didPressTakeAnother()
-        })
-        alert.addAction(saveAction)
-        alert.addAction(cancelAction)
-        self.present(alert, animated: true, completion: nil)
-        
     }
     
     private func isCameraAvailable() -> Bool {

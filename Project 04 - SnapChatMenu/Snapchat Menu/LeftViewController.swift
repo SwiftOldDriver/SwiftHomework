@@ -1,5 +1,5 @@
 //
-//  LeftView.swift
+//  LeftViewController.swift
 //  Snapchat Menu
 //
 //  Created by Jiar on 2016/11/24.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class LeftView: UIViewController {
+class LeftViewController: UIViewController {
     
 }

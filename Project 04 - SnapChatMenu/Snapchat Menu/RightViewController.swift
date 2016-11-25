@@ -1,5 +1,5 @@
 //
-//  RightView.swift
+//  RightViewController.swift
 //  Snapchat Menu
 //
 //  Created by Jiar on 2016/11/24.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class RightView: UIViewController {
+class RightViewController: UIViewController {
     
 }

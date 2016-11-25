@@ -12,12 +12,12 @@
 		808B09601DE6E180006398B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808B095E1DE6E180006398B8 /* Main.storyboard */; };
 		808B09621DE6E180006398B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 808B09611DE6E180006398B8 /* Assets.xcassets */; };
 		808B09651DE6E180006398B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808B09631DE6E180006398B8 /* LaunchScreen.storyboard */; };
-		808B096D1DE6E6A9006398B8 /* LeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808B096C1DE6E6A9006398B8 /* LeftView.xib */; };
-		808B096F1DE6E6BB006398B8 /* LeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808B096E1DE6E6BB006398B8 /* LeftView.swift */; };
-		808B09711DE6E756006398B8 /* RightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808B09701DE6E756006398B8 /* RightView.swift */; };
-		808B09731DE6E76F006398B8 /* RightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808B09721DE6E76F006398B8 /* RightView.xib */; };
-		80FC5B8C1DE6E89000B3D4E8 /* CameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80FC5B8B1DE6E89000B3D4E8 /* CameraView.xib */; };
-		80FC5B8E1DE6E8FB00B3D4E8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC5B8D1DE6E8FB00B3D4E8 /* CameraView.swift */; };
+		808B096D1DE6E6A9006398B8 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808B096C1DE6E6A9006398B8 /* LeftViewController.xib */; };
+		808B096F1DE6E6BB006398B8 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808B096E1DE6E6BB006398B8 /* LeftViewController.swift */; };
+		808B09711DE6E756006398B8 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808B09701DE6E756006398B8 /* RightViewController.swift */; };
+		808B09731DE6E76F006398B8 /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808B09721DE6E76F006398B8 /* RightViewController.xib */; };
+		80FC5B8C1DE6E89000B3D4E8 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80FC5B8B1DE6E89000B3D4E8 /* CameraViewController.xib */; };
+		80FC5B8E1DE6E8FB00B3D4E8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC5B8D1DE6E8FB00B3D4E8 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +28,12 @@
 		808B09611DE6E180006398B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		808B09641DE6E180006398B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		808B09661DE6E180006398B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		808B096C1DE6E6A9006398B8 /* LeftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftView.xib; sourceTree = "<group>"; };
-		808B096E1DE6E6BB006398B8 /* LeftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftView.swift; sourceTree = "<group>"; };
-		808B09701DE6E756006398B8 /* RightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightView.swift; sourceTree = "<group>"; };
-		808B09721DE6E76F006398B8 /* RightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightView.xib; sourceTree = "<group>"; };
-		80FC5B8B1DE6E89000B3D4E8 /* CameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraView.xib; sourceTree = "<group>"; };
-		80FC5B8D1DE6E8FB00B3D4E8 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		808B096C1DE6E6A9006398B8 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
+		808B096E1DE6E6BB006398B8 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		808B09701DE6E756006398B8 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		808B09721DE6E76F006398B8 /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightViewController.xib; sourceTree = "<group>"; };
+		80FC5B8B1DE6E89000B3D4E8 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		80FC5B8D1DE6E8FB00B3D4E8 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +68,12 @@
 			children = (
 				808B095A1DE6E180006398B8 /* AppDelegate.swift */,
 				808B095C1DE6E180006398B8 /* ViewController.swift */,
-				808B096E1DE6E6BB006398B8 /* LeftView.swift */,
-				808B096C1DE6E6A9006398B8 /* LeftView.xib */,
-				808B09701DE6E756006398B8 /* RightView.swift */,
-				808B09721DE6E76F006398B8 /* RightView.xib */,
-				80FC5B8D1DE6E8FB00B3D4E8 /* CameraView.swift */,
-				80FC5B8B1DE6E89000B3D4E8 /* CameraView.xib */,
+				808B096E1DE6E6BB006398B8 /* LeftViewController.swift */,
+				808B096C1DE6E6A9006398B8 /* LeftViewController.xib */,
+				808B09701DE6E756006398B8 /* RightViewController.swift */,
+				808B09721DE6E76F006398B8 /* RightViewController.xib */,
+				80FC5B8D1DE6E8FB00B3D4E8 /* CameraViewController.swift */,
+				80FC5B8B1DE6E89000B3D4E8 /* CameraViewController.xib */,
 				808B095E1DE6E180006398B8 /* Main.storyboard */,
 				808B09611DE6E180006398B8 /* Assets.xcassets */,
 				808B09631DE6E180006398B8 /* LaunchScreen.storyboard */,
@@ -143,11 +143,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				808B09651DE6E180006398B8 /* LaunchScreen.storyboard in Resources */,
-				808B09731DE6E76F006398B8 /* RightView.xib in Resources */,
+				808B09731DE6E76F006398B8 /* RightViewController.xib in Resources */,
 				808B09621DE6E180006398B8 /* Assets.xcassets in Resources */,
-				80FC5B8C1DE6E89000B3D4E8 /* CameraView.xib in Resources */,
+				80FC5B8C1DE6E89000B3D4E8 /* CameraViewController.xib in Resources */,
 				808B09601DE6E180006398B8 /* Main.storyboard in Resources */,
-				808B096D1DE6E6A9006398B8 /* LeftView.xib in Resources */,
+				808B096D1DE6E6A9006398B8 /* LeftViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,9 +160,9 @@
 			files = (
 				808B095D1DE6E180006398B8 /* ViewController.swift in Sources */,
 				808B095B1DE6E180006398B8 /* AppDelegate.swift in Sources */,
-				808B096F1DE6E6BB006398B8 /* LeftView.swift in Sources */,
-				80FC5B8E1DE6E8FB00B3D4E8 /* CameraView.swift in Sources */,
-				808B09711DE6E756006398B8 /* RightView.swift in Sources */,
+				808B096F1DE6E6BB006398B8 /* LeftViewController.swift in Sources */,
+				80FC5B8E1DE6E8FB00B3D4E8 /* CameraViewController.swift in Sources */,
+				808B09711DE6E756006398B8 /* RightViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

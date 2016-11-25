@@ -22,33 +22,27 @@ class ViewController: UIViewController {
     }
     
     private func configScrollView() {
+        let leftViewController: LeftViewController = LeftViewController(nibName: "LeftViewController", bundle: nil)
+        let cameraViewController: CameraViewController = CameraViewController(nibName: "CameraViewController", bundle: nil)
+        let rightViewController: RightViewController = RightViewController(nibName: "RightViewController", bundle: nil)
         
-        let leftView: LeftView = LeftView(nibName: "LeftView", bundle: nil)
-        let centerView: CameraView = CameraView(nibName: "CameraView", bundle: nil)
-        let rightView: RightView = RightView(nibName: "RightView", bundle: nil)
-        
-        addChildViewController(leftView)
-        scrollView.addSubview(leftView.view)
-//        leftView.didMove(toParentViewController: self)
-        
-        addChildViewController(rightView)
-        scrollView.addSubview(rightView.view)
-//        rightView.didMove(toParentViewController: self)
-        
-        addChildViewController(centerView)
-        scrollView.addSubview(centerView.view)
-//        centerView.didMove(toParentViewController: self)
+        addChildViewController(leftViewController)
+        scrollView.addSubview(leftViewController.view)
+        leftViewController.didMove(toParentViewController: self)
+        addChildViewController(cameraViewController)
+        scrollView.addSubview(cameraViewController.view)
+        cameraViewController.didMove(toParentViewController: self)
+        addChildViewController(rightViewController)
+        scrollView.addSubview(rightViewController.view)
+        rightViewController.didMove(toParentViewController: self)
         
         var itemFrame: CGRect = view.frame
-        leftView.view.frame = itemFrame
+        leftViewController.view.frame = itemFrame
         itemFrame.origin.x = view.frame.width
-        centerView.view.frame = itemFrame
+        cameraViewController.view.frame = itemFrame
         itemFrame.origin.x = 2 * view.frame.width
-        rightView.view.frame = itemFrame
-        
+        rightViewController.view.frame = itemFrame
         scrollView.contentSize = CGSize(width: view.frame.width * 3, height: view.frame.size.height)
-        
     }
 
 }
-
