@@ -12,7 +12,7 @@ import CoreLocation
 final class ViewController: UIViewController {
 
     @IBOutlet weak var labMyCurrentLocation: UILabel!
-    fileprivate var locationManager: CLLocationManager!
+    fileprivate var locationManager: CLLocationManager? = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +23,12 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func findMyLocation(_ sender: UIButton) {
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
+        if let manager = locationManager {
+            manager.delegate = self
+            manager.desiredAccuracy = kCLLocationAccuracyBest
+            manager.requestAlwaysAuthorization()
+            manager.startUpdatingLocation()
+        }
     }
 }
 
@@ -59,7 +60,7 @@ extension ViewController : CLLocationManagerDelegate {
     
     private func displayLocationInfo(_ placemark: CLPlacemark?) {
         if let containsPlacemark = placemark {
-            locationManager.stopUpdatingLocation()//stop updating location to save battery life
+            locationManager?.stopUpdatingLocation()//stop updating location to save battery life
             let locality = containsPlacemark.locality ?? ""
             let postalCode = containsPlacemark.postalCode ?? ""
             let administrativeArea = containsPlacemark.administrativeArea ?? ""
