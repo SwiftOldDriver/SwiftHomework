@@ -30,7 +30,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var changeFontButton: UIButton!
     @IBOutlet weak var fontTableView: UITableView!
+    
     @IBAction func changeFontDidTouch(_ sender: Any) {
+        //循环切换下一种字体
         fontRowIndex = (fontRowIndex + 1) % 5
         print(fontNames[fontRowIndex])
         title = fontNames[fontRowIndex]
