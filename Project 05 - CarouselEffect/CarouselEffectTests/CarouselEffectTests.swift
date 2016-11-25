@@ -1,15 +1,15 @@
 //
-//  Project_05___CarouselEffectTests.swift
-//  Project 05 - CarouselEffectTests
+//  CarouselEffectTests.swift
+//  CarouselEffectTests
 //
 //  Created by 陈铭嘉 on 2016/11/25.
 //  Copyright © 2016年 com.Boolan. All rights reserved.
 //
 
 import XCTest
-@testable import Project_05___CarouselEffect
+@testable import CarouselEffect
 
-class Project_05___CarouselEffectTests: XCTestCase {
+class CarouselEffectTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

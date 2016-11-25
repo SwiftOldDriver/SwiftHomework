@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Project 05 - CarouselEffect.xcscheme</key>
+		<key>CarouselEffect.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>DFC1986F1DE7F07200459236</key>
+		<key>DFCDE4071DE8485D003AF2E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DFC198831DE7F07200459236</key>
+		<key>DFCDE41B1DE8485D003AF2E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DFC1988E1DE7F07200459236</key>
+		<key>DFCDE4261DE8485D003AF2E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -16,7 +16,7 @@ class JokeItem {
     var numberOfPosts = 0
     var featuredImage: UIImage?
     
-    init(title: String, content: String, featuredImage: UIImage!) {
+    init(title: String, content: String, featuredImage: UIImage) {
         self.title = title
         self.content = content
         self.featuredImage = featuredImage

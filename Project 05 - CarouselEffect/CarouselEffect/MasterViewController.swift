@@ -47,7 +47,7 @@ extension MasterViewController:UICollectionViewDataSource{
             else { fatalError("unexpected cell in storyboard") }
         
         if let joke = jokes?[indexPath.item]{
-            cell.joke = joke
+            cell.joke = nil
         }
         return cell;
     }

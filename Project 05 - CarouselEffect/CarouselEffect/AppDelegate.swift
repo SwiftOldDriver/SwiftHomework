@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Project 05 - CarouselEffect
+//  CarouselEffect
 //
 //  Created by 陈铭嘉 on 2016/11/25.
 //  Copyright © 2016年 com.Boolan. All rights reserved.

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DFC1986F1DE7F07200459236"
+               BlueprintIdentifier = "DFCDE4071DE8485D003AF2E3"
                BuildableName = "CarouselEffect.app"
                BlueprintName = "CarouselEffect"
                ReferencedContainer = "container:CarouselEffect.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DFC198831DE7F07200459236"
+               BlueprintIdentifier = "DFCDE41B1DE8485D003AF2E3"
                BuildableName = "CarouselEffectTests.xctest"
                BlueprintName = "CarouselEffectTests"
                ReferencedContainer = "container:CarouselEffect.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DFC1988E1DE7F07200459236"
+               BlueprintIdentifier = "DFCDE4261DE8485D003AF2E3"
                BuildableName = "CarouselEffectUITests.xctest"
                BlueprintName = "CarouselEffectUITests"
                ReferencedContainer = "container:CarouselEffect.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DFC1986F1DE7F07200459236"
+            BlueprintIdentifier = "DFCDE4071DE8485D003AF2E3"
             BuildableName = "CarouselEffect.app"
             BlueprintName = "CarouselEffect"
             ReferencedContainer = "container:CarouselEffect.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DFC1986F1DE7F07200459236"
+            BlueprintIdentifier = "DFCDE4071DE8485D003AF2E3"
             BuildableName = "CarouselEffect.app"
             BlueprintName = "CarouselEffect"
             ReferencedContainer = "container:CarouselEffect.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DFC1986F1DE7F07200459236"
+            BlueprintIdentifier = "DFCDE4071DE8485D003AF2E3"
             BuildableName = "CarouselEffect.app"
             BlueprintName = "CarouselEffect"
             ReferencedContainer = "container:CarouselEffect.xcodeproj">
