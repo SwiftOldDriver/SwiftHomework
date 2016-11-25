@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "591E18E9E198640961F0FC264F6CC6239C3E48E9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "591E18E9E198640961F0FC264F6CC6239C3E48E9" : 9223372036854775807,
+    "17631B4E5A724D7FA07CFC111C92C45721DA9E17" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A24255F1-FC2A-4230-BAB3-B36448183C03",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "591E18E9E198640961F0FC264F6CC6239C3E48E9" : "Project%2006%20-%20MyLocation\/",
+    "17631B4E5A724D7FA07CFC111C92C45721DA9E17" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MyLocation",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MyLocation.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TimberTang\/SwiftHomework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "17631B4E5A724D7FA07CFC111C92C45721DA9E17"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TimberTang\/SwiftHomework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "591E18E9E198640961F0FC264F6CC6239C3E48E9"
+    }
+  ]
+}
