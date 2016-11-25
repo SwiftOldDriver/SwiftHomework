@@ -15,7 +15,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 "谢谢「造字工房」，本案例不涉及商业使用",
                 "使用到造字工房劲黑体，致黑体，童心体",
                 "呵呵，再见🤗 See you next Project",
-                "简书 Yasin的简书",
                 "测试测试测试测试测试测试",
                 "123",
                 "Alex",
@@ -31,7 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var changeFontButton: UIButton!
     @IBOutlet weak var fontTableView: UITableView!
-    @IBAction func changeFontDidTouch(_ sender: AnyObject) {
+    @IBAction func changeFontDidTouch(_ sender: Any) {
         fontRowIndex = (fontRowIndex + 1) % 5
         print(fontNames[fontRowIndex])
         title = fontNames[fontRowIndex]
@@ -68,15 +67,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = fontTableView.dequeueReusableCell(withIdentifier: "FontCell", for: indexPath)
-        
         let text = data[indexPath.row]
-        
         cell.textLabel?.text = text
         cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.font = UIFont(name:fontNames[fontRowIndex], size:16)
-        
         return cell
     }
     
