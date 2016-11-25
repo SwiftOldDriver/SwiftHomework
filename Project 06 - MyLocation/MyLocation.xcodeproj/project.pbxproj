@@ -12,8 +12,6 @@
 		C9E9E2661DE6F3CE0047C85F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E9E2641DE6F3CE0047C85F /* Main.storyboard */; };
 		C9E9E26B1DE6F3CE0047C85F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E9E26A1DE6F3CE0047C85F /* Assets.xcassets */; };
 		C9E9E26E1DE6F3CE0047C85F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E9E26C1DE6F3CE0047C85F /* LaunchScreen.storyboard */; };
-		C9E9E2791DE6F3CE0047C85F /* MyLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9E2781DE6F3CE0047C85F /* MyLocationTests.swift */; };
-		C9E9E2841DE6F3CE0047C85F /* MyLocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9E2831DE6F3CE0047C85F /* MyLocationUITests.swift */; };
 		C9F4ADC81DE7173000C12877 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F4ADC71DE7173000C12877 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,11 +41,7 @@
 		C9E9E26D1DE6F3CE0047C85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9E9E26F1DE6F3CE0047C85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9E9E2741DE6F3CE0047C85F /* MyLocationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLocationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9E9E2781DE6F3CE0047C85F /* MyLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationTests.swift; sourceTree = "<group>"; };
-		C9E9E27A1DE6F3CE0047C85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9E9E27F1DE6F3CE0047C85F /* MyLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9E9E2831DE6F3CE0047C85F /* MyLocationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationUITests.swift; sourceTree = "<group>"; };
-		C9E9E2851DE6F3CE0047C85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9F4ADC71DE7173000C12877 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -81,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				C9E9E25F1DE6F3CE0047C85F /* MyLocation */,
-				C9E9E2771DE6F3CE0047C85F /* MyLocationTests */,
-				C9E9E2821DE6F3CE0047C85F /* MyLocationUITests */,
 				C9E9E25E1DE6F3CE0047C85F /* Products */,
 				C9F4ADC61DE7173000C12877 /* Frameworks */,
 			);
@@ -109,24 +101,6 @@
 				C9E9E26F1DE6F3CE0047C85F /* Info.plist */,
 			);
 			path = MyLocation;
-			sourceTree = "<group>";
-		};
-		C9E9E2771DE6F3CE0047C85F /* MyLocationTests */ = {
-			isa = PBXGroup;
-			children = (
-				C9E9E2781DE6F3CE0047C85F /* MyLocationTests.swift */,
-				C9E9E27A1DE6F3CE0047C85F /* Info.plist */,
-			);
-			path = MyLocationTests;
-			sourceTree = "<group>";
-		};
-		C9E9E2821DE6F3CE0047C85F /* MyLocationUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C9E9E2831DE6F3CE0047C85F /* MyLocationUITests.swift */,
-				C9E9E2851DE6F3CE0047C85F /* Info.plist */,
-			);
-			path = MyLocationUITests;
 			sourceTree = "<group>";
 		};
 		C9F4ADC61DE7173000C12877 /* Frameworks */ = {
@@ -280,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9E9E2791DE6F3CE0047C85F /* MyLocationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +261,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9E9E2841DE6F3CE0047C85F /* MyLocationUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
