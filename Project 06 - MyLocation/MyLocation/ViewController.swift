@@ -11,7 +11,7 @@ import CoreLocation
 
 final class ViewController: UIViewController {
 
-    @IBOutlet weak var labMyCurrentLocation: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     fileprivate var locationManager: CLLocationManager? = CLLocationManager()
     
     override func viewDidLoad() {
@@ -30,20 +30,21 @@ final class ViewController: UIViewController {
             manager.startUpdatingLocation()
         }
     }
+    
 }
 
 // CLLocationManagerDelegate
 extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-         labMyCurrentLocation.text = "Error while updating location " + error.localizedDescription
+         locationLabel.text = "Error while updating location " + error.localizedDescription
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {[weak self] (placemarks, error)->Void in
             if let `self` = self {
                 guard  error == nil else {
-                    self.labMyCurrentLocation.text = "Reverse geocoder failed with error" + error!.localizedDescription
+                    self.locationLabel.text = "Reverse geocoder failed with error" + error!.localizedDescription
                     return
                 }
                 if let palces = placemarks {
@@ -51,7 +52,7 @@ extension ViewController: CLLocationManagerDelegate {
                         let pm = palces[0]
                         self.displayLocationInfo(pm)
                     }else {
-                        self.labMyCurrentLocation.text = "Problem with the data received from geocoder"
+                        self.locationLabel.text = "Problem with the data received from geocoder"
                     }
                 }
             }
@@ -65,7 +66,7 @@ extension ViewController: CLLocationManagerDelegate {
             let postalCode = containsPlacemark.postalCode ?? ""
             let administrativeArea = containsPlacemark.administrativeArea ?? ""
             let country = containsPlacemark.country ?? ""
-            labMyCurrentLocation.text = locality +  postalCode +  administrativeArea +  country
+            locationLabel.text = locality +  postalCode +  administrativeArea +  country
         }
     }
     

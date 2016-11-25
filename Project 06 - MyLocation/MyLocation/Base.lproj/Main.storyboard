@@ -84,11 +84,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="labMyCurrentLocation" destination="9af-uI-R0f" id="YmC-0D-1am"/>
+                        <outlet property="locationLabel" destination="9af-uI-R0f" id="oHJ-Os-w1V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="292" y="114"/>
         </scene>
     </scenes>
     <resources>
