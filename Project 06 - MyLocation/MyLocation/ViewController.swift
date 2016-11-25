@@ -4,7 +4,7 @@
 //
 //  Created by TimberTang on 16/11/24.
 //  Copyright © 2016年 TimberTang. All rights reserved.
-//
+//  获取当前位置信息首先要在 info.plist 中添加 "Privacy - Location Always Usage Description" 和 "Privacy - Location When In Use Usage Description" 这两个获取位置权限的描述
 
 import UIKit
 import CoreLocation
@@ -12,8 +12,6 @@ import CoreLocation
 final class ViewController: UIViewController {
 
     @IBOutlet weak var labMyCurrentLocation: UILabel!
-    
-    
     fileprivate var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
@@ -24,66 +22,55 @@ final class ViewController: UIViewController {
         return .lightContent
     }
     
-    /// to find my location
-    ///
-    /// - parameter sender: sender
     @IBAction func findMyLocation(_ sender: UIButton) {
-        
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-
     }
 }
-
 
 // CLLocationManagerDelegate
 extension ViewController : CLLocationManagerDelegate {
     
-    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        
-         self.labMyCurrentLocation.text = "Error while updating location " + error.localizedDescription
-        
+         labMyCurrentLocation.text = "Error while updating location " + error.localizedDescription
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
-            guard  error == nil else {
-                self.labMyCurrentLocation.text = "Reverse geocoder failed with error" + error!.localizedDescription
-                return
-            }
-            if let palces = placemarks {
-                if palces.count > 0 {
-                    let pm = palces[0]
-                    self.displayLocationInfo(pm)
-                }else {
-                    self.labMyCurrentLocation.text = "Problem with the data received from geocoder"
+        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {[weak self] (placemarks, error)->Void in
+            if let `self` = self {
+                guard  error == nil else {
+                    self.labMyCurrentLocation.text = "Reverse geocoder failed with error" + error!.localizedDescription
+                    return
+                }
+                if let palces = placemarks {
+                    if palces.count > 0 {
+                        let pm = palces[0]
+                        self.displayLocationInfo(pm)
+                    }else {
+                        self.labMyCurrentLocation.text = "Problem with the data received from geocoder"
+                    }
                 }
             }
         })
-        
     }
     
-    
-    func displayLocationInfo(_ placemark: CLPlacemark?) {
-        
+    private func displayLocationInfo(_ placemark: CLPlacemark?) {
         if let containsPlacemark = placemark {
-            //stop updating location to save battery life
-            locationManager.stopUpdatingLocation()
+            locationManager.stopUpdatingLocation()//stop updating location to save battery life
             let locality = (containsPlacemark.locality != nil) ? containsPlacemark.locality : ""
             let postalCode = (containsPlacemark.postalCode != nil) ? containsPlacemark.postalCode : ""
             let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
             let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
             
             if let local = locality, let post = postalCode, let adminArea = administrativeArea, let coun = country {
-                self.labMyCurrentLocation.text = local +  post +  adminArea +  coun
+                labMyCurrentLocation.text = local +  post +  adminArea +  coun
             }
         }
     }
+    
 }
 
 
