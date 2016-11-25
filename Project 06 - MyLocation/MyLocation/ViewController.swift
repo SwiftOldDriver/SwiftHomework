@@ -60,14 +60,11 @@ extension ViewController : CLLocationManagerDelegate {
     private func displayLocationInfo(_ placemark: CLPlacemark?) {
         if let containsPlacemark = placemark {
             locationManager.stopUpdatingLocation()//stop updating location to save battery life
-            let locality = (containsPlacemark.locality != nil) ? containsPlacemark.locality : ""
-            let postalCode = (containsPlacemark.postalCode != nil) ? containsPlacemark.postalCode : ""
-            let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
-            let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
-            
-            if let local = locality, let post = postalCode, let adminArea = administrativeArea, let coun = country {
-                labMyCurrentLocation.text = local +  post +  adminArea +  coun
-            }
+            let locality = containsPlacemark.locality ?? ""
+            let postalCode = containsPlacemark.postalCode ?? ""
+            let administrativeArea = containsPlacemark.administrativeArea ?? ""
+            let country = containsPlacemark.country ?? ""
+            labMyCurrentLocation.text = locality +  postalCode +  administrativeArea +  country
         }
     }
     
