@@ -42,20 +42,22 @@ extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {[weak self] (placemarks, error)->Void in
-            if let `self` = self {
-                guard  error == nil else {
-                    self.locationLabel.text = "Reverse geocoder failed with error" + error!.localizedDescription
-                    return
-                }
-                if let palces = placemarks {
-                    if palces.count > 0 {
-                        let pm = palces[0]
-                        self.displayLocationInfo(pm)
-                    }else {
-                        self.locationLabel.text = "Problem with the data received from geocoder"
-                    }
+            guard let `self` = self else {
+                return
+            }
+            guard  error == nil else {
+                self.locationLabel.text = "Reverse geocoder failed with error" + error!.localizedDescription
+                return
+            }
+            if let palces = placemarks {
+                if palces.count > 0 {
+                    let pm = palces[0]
+                    self.displayLocationInfo(pm)
+                }else {
+                    self.locationLabel.text = "Problem with the data received from geocoder"
                 }
             }
+
         })
     }
     
