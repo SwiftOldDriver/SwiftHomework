@@ -45,19 +45,15 @@ extension ViewController: CLLocationManagerDelegate {
             guard let `self` = self else {
                 return
             }
-            guard  error == nil else {
-                self.locationLabel.text = "Reverse geocoder failed with error" + error!.localizedDescription
+            if let err = error {
+                self.locationLabel.text = "Reverse geocoder failed with error" + err.localizedDescription
                 return
             }
-            if let palces = placemarks {
-                if palces.count > 0 {
-                    let pm = palces[0]
-                    self.displayLocationInfo(pm)
-                }else {
-                    self.locationLabel.text = "Problem with the data received from geocoder"
-                }
+            if let palces = placemarks, let place = palces.first {
+                self.displayLocationInfo(place)
+            }else {
+                self.locationLabel.text = "Problem with the data received from geocoder"
             }
-
         })
     }
     
