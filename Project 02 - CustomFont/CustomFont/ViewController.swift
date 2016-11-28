@@ -52,14 +52,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         changeFontButton.layer.cornerRadius = changeFontButton.frame.size.width/2
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 35
-    }
+    //固定高度可以直接设置tableView.rowHeight，在storyboard里面设置了
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 35
+//    }
     
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    //默认sections是1，可以省略不写
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -74,7 +76,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    @IBAction func changeFontTouch(_ sender: Any) {
+    @IBAction func changeFont(_ sender: Any) {
         //循环切换下一种字体
         fontNamesIndex = (fontNamesIndex + 1) % fontNames.count
         print(fontNames[fontNamesIndex])
