@@ -8,6 +8,12 @@
 
 import UIKit
 
+struct Video {
+    let image: String
+    let title: String
+    let source: String
+}
+
 class VideoCell: UITableViewCell {
 
     @IBOutlet weak var videoScreenshot: UIImageView!
@@ -19,11 +25,10 @@ class VideoCell: UITableViewCell {
         // Initialization code
     }
     
-    public func bindDataSource(with dataSource: VideoCellDataSource) {
-        let videoModel = dataSource.videoCellModel
-        videoScreenshot.image = UIImage(named: videoModel.videoScreenShotImageName)
-        videoTitleLabel.text = videoModel.videoTitle
-        videoSourceLabel.text = videoModel.videoSourceSubTitle
+    public func bind(video: Video) {
+        videoScreenshot.image = UIImage(named: video.image)
+        videoTitleLabel.text = video.title
+        videoSourceLabel.text = video.source
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

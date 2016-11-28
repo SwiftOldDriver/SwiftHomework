@@ -10,26 +10,30 @@ import UIKit
 import AVKit
 import AVFoundation
 
-private struct Constant {
-    static let videoPath = Bundle.main.path(forResource: "emoji zone", ofType: "mp4")
-}
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var videoDataSource = [VideoCellDataSource]()
+
+    let data = [
+        Video(image: "videoScreenshot01", title: "Introduce 3DS Mario", source: "Youtube - 06:32"),
+        Video(image: "videoScreenshot02", title: "Emoji Among Us", source: "Vimeo - 3:34"),
+        Video(image: "videoScreenshot03", title: "Seals Documentary", source: "Vine - 00:06"),
+        Video(image: "videoScreenshot04", title: "Adventure Time", source: "Youtube - 02:39"),
+        Video(image: "videoScreenshot05", title: "Facebook HQ", source: "Facebook - 10:20"),
+        Video(image: "videoScreenshot06", title: "Lijiang Lugu Lake", source: "Allen - 20:30")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.videoDataSource = VideoCellDataSource.constructDataSource()
+        tableView.rowHeight = 220
     }
 
     @IBAction func playVideoButtonDidTouch(_ sender: Any) {
-        if let path = Constant.videoPath, let url = URL(string: path) {
+        if let path = Bundle.main.path(forResource: "emoji zone", ofType: "mp4") {
             let playViewController = AVPlayerViewController()
-            let playerView = AVPlayer(url: url)
+            let playerView = AVPlayer(url: URL(fileURLWithPath: path))
             playViewController.player = playerView
-            self.present(playViewController, animated: true) {
+            present(playViewController, animated: true) {
                 playViewController.player?.play()
             }
         }
@@ -46,21 +50,13 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.videoDataSource.count
+        return data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! VideoCell
-        let dataSource = self.videoDataSource[indexPath.row]
-        cell.bindDataSource(with: dataSource)
+        cell.bind(video: data[indexPath.row])
         return cell
-    }
-}
-
-extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let dataSource = self.videoDataSource[indexPath.row]
-        return dataSource.cellHeight
     }
 }
 
