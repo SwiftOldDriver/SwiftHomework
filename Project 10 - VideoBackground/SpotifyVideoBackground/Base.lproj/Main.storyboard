@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpotifyVideoBackground" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="CUl-hY-Vfx">
+                                <rect key="frame" x="77" y="60" width="220" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="mlq-cj-dzf"/>
+                                    <constraint firstAttribute="width" constant="220" id="oET-oq-IXs"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nST-lb-ECk">
+                                <rect key="frame" x="24" y="603" width="327" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GuW-n1-rwm"/>
+                                </constraints>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxj-eE-Blp">
+                                <rect key="frame" x="24" y="539" width="327" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aPt-TP-KIb"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wxj-eE-Blp" firstAttribute="leading" secondItem="nST-lb-ECk" secondAttribute="leading" id="05J-uy-KN0"/>
+                            <constraint firstItem="nST-lb-ECk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="7S1-Uk-4i6"/>
+                            <constraint firstItem="wxj-eE-Blp" firstAttribute="trailing" secondItem="nST-lb-ECk" secondAttribute="trailing" id="EPO-Ej-FEK"/>
+                            <constraint firstAttribute="trailing" secondItem="nST-lb-ECk" secondAttribute="trailing" constant="24" id="MaW-5u-YMM"/>
+                            <constraint firstItem="nST-lb-ECk" firstAttribute="top" secondItem="wxj-eE-Blp" secondAttribute="bottom" constant="20" id="Xey-Cd-Y1L"/>
+                            <constraint firstItem="CUl-hY-Vfx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hhG-Fb-p4r"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nST-lb-ECk" secondAttribute="bottom" constant="20" id="lfe-hm-Y1N"/>
+                            <constraint firstItem="CUl-hY-Vfx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="rvY-MN-Tsi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="wxj-eE-Blp" id="Vnk-RV-8aq"/>
+                        <outlet property="signupBtn" destination="nST-lb-ECk" id="6W8-gh-Htd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="login_logo" width="218" height="66"/>
+    </resources>
 </document>
