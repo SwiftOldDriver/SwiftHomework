@@ -62,17 +62,14 @@ class CameraViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         captureSession.sessionPreset = AVCaptureSessionPreset1920x1080
         let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
-        var input: AVCaptureDeviceInput!
-        do {
-            input = try AVCaptureDeviceInput(device: captureDevice)
-        } catch {
+        guard let input = try? AVCaptureDeviceInput(device: captureDevice) else {
             return
         }
         guard captureSession.canAddInput(input) else {
             return
         }
         captureSession.addInput(input)
-        stillImageOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
+        stillImageOutput.outputSettings = [AVVideoCodecKey : AVVideoCodecJPEG]
         guard captureSession.canAddOutput(stillImageOutput) else {
             return
         }
