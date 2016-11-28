@@ -16,7 +16,7 @@ class JokeCell: UICollectionViewCell {
     
     var joke : JokeItem? {
         didSet {
-            if let _ = joke{
+            if let _ = joke {
                 updateUI()
             }
         }
