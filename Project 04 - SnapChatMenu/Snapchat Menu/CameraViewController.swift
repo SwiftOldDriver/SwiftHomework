@@ -33,6 +33,9 @@ class CameraViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func didPressTakeAnother() {
+        if !isCameraAvailable() {
+            return
+        }
         if didTakePhoto {
             tempImageView.isHidden = true
             didTakePhoto = false
@@ -45,11 +48,7 @@ class CameraViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private func configCamera() {
         if !isCameraAvailable() {
-            print("该设备没有摄像头")
-            return
-        }
-        if !isRearCameraAvailable() {
-            print("该设备后摄像头无法使用")
+            print("该设备没有摄像头或摄像头无法使用")
             return
         }
         captureSession.sessionPreset = AVCaptureSessionPreset1920x1080
@@ -97,11 +96,7 @@ class CameraViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     private func isCameraAvailable() -> Bool {
-        return UIImagePickerController.isSourceTypeAvailable(.camera)
-    }
-    
-    private func isRearCameraAvailable() -> Bool {
-        return UIImagePickerController.isCameraDeviceAvailable(.rear)
+        return UIImagePickerController.isSourceTypeAvailable(.camera) && UIImagePickerController.isCameraDeviceAvailable(.rear)
     }
     
 }
