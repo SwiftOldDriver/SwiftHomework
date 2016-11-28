@@ -26,14 +26,6 @@ class CameraViewController: UIViewController, UIGestureRecognizerDelegate {
         configCamera()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     private func configRecognizer() {
         let gesture = UITapGestureRecognizer.init(target: self, action: #selector(didPressTakeAnother))
         gesture.delegate = self
