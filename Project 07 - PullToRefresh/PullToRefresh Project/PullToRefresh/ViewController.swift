@@ -16,7 +16,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var emojiData = [String]()
 
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Pull To Refresh"
@@ -30,7 +29,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // MARK: - Setup
-
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -46,8 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     // MARK: - Private Function
-    
-    // get a random emoji array , whitch has 5 elements
+    // get a random emoji array , which has 5 elements
     private func randomEmojiData() -> [String] {
         let emojis = ["😀","😁","😂","😃","😄","😅","😆","😇","😈","👿","😉","😊","☺️","😋","😌","😍","😎","😏","😐","😑","😒","😓","😔","😕","😖","😗","😘","😙","😚","😛","😜","😝","😞","😟","😠","😡","😢","😣","😤","😥","😦","😧","😨","😩","😪","😫","😬","😭","😮","😯","😰","😱","😲","😳","😴","😵","😶","😷"]
         let emojiCount = emojis.count
@@ -61,10 +58,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // MARK: - UITableViewDataSource
-    internal func numberOfSections(in _: UITableView) -> Int {
-        return 1
-    }
-    
     internal func tableView(_ _: UITableView, numberOfRowsInSection _: Int) -> Int {
         return emojiData.count
     }
@@ -79,14 +72,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     // MARK: - UITableViewDelegate
-    
     func tableView(_ _: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
         return 60
     }
     
-    
     // MARK: - RefreshControl
-    
     func refreshTableView() {
         emojiData.insert(contentsOf: randomEmojiData(), at: 0)
         tableView.reloadSections(IndexSet(arrayLiteral:0), with: .automatic)
