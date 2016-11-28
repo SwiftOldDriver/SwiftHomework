@@ -28,7 +28,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configBtn()
         configPlayer()
-        configNotification()
     }
     
     private func configBtn() {
@@ -40,7 +39,7 @@ class ViewController: UIViewController {
         guard let path = Bundle.main.path(forResource: "moments", ofType: "mp4") else {
             return
         }
-        player = AVPlayer.init(url: URL(fileURLWithPath: path))
+        player = AVPlayer(url: URL(fileURLWithPath: path))
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.repeatDuration = playerLayer.duration
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
@@ -53,9 +52,6 @@ class ViewController: UIViewController {
          */
         view.layer.insertSublayer(playerLayer, at: 0)
         player.play()
-    }
-    
-    private func configNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(repeatToPlay), name: .AVPlayerItemDidPlayToEndTime, object: player.currentItem)
     }
 
