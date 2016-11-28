@@ -16,12 +16,14 @@ class JokeCell: UICollectionViewCell {
     
     var joke : JokeItem? {
         didSet {
-            if let _ = joke{  updateUI()  }
+            if let _ = joke{
+                updateUI()
+            }
         }
     }
     
     //Update only if the joke is available
-    fileprivate func updateUI(){
+    fileprivate func updateUI() {
         featuredImageView.image = joke?.featuredImage
         jokeTitleLabel.text = joke?.title
     }

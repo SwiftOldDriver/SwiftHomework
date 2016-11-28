@@ -13,10 +13,10 @@ class MasterViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!    
     @IBOutlet weak var backgroundImageView: UIImageView!
     
-    fileprivate var jokes = JokeFactory.createJokes();
+    fileprivate var jokes = JokeFactory.createJokes()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        get{ return UIStatusBarStyle.lightContent }
+        return UIStatusBarStyle.lightContent
     }
     
     // MARK: UIViewController / Lifecycle
@@ -44,7 +44,9 @@ extension MasterViewController:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing:JokeCell.self), for: indexPath) as? JokeCell
-            else { fatalError("unexpected cell in storyboard") }
+            else {
+                fatalError("unexpected cell in storyboard")
+        }
         
         if let joke = jokes?[indexPath.item]{
             cell.joke = joke
