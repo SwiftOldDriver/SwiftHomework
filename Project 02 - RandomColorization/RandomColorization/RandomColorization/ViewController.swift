@@ -14,8 +14,7 @@ class ViewController: UIViewController {
     private var timer: Timer?
     private lazy var audioPlayer: AVAudioPlayer = {
         var player = AVAudioPlayer()
-        let musicURL = URL(fileURLWithPath: Bundle.main.path(forResource: "Ecstasy",
-                                                             ofType: "mp3")!)
+        let musicURL = URL(fileURLWithPath: Bundle.main.path(forResource: "Ecstasy", ofType: "mp3")!)
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
@@ -54,7 +53,7 @@ class ViewController: UIViewController {
         } else {
             timer = Timer.scheduledTimer(timeInterval: 0.2,
                                          target: self,
-                                         selector: #selector(self.randomColor),
+                                         selector: #selector(self.changeBackgroundColor),
                                          userInfo: nil,
                                          repeats: true)
             audioPlayer.prepareToPlay()
@@ -67,7 +66,7 @@ class ViewController: UIViewController {
         view.layer.addSublayer(gradientLayer)
     }
     
-    @objc private func randomColor() {
+    @objc private func changeBackgroundColor() {
         let redValue = CGFloat(drand48())
         let blueValue =  CGFloat(drand48())
         let greenValue = CGFloat(drand48())
