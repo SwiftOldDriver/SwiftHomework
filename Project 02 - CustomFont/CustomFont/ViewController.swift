@@ -26,18 +26,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                      "edundot",
                      "Gaspar Regular"]
     
-    var fontRowIndex = 0
+    var fontNamesIndex = 0
     
     @IBOutlet weak var changeFontButton: UIButton!
     @IBOutlet weak var fontTableView: UITableView!
     
-    @IBAction func changeFontDidTouch(_ sender: Any) {
-        //循环切换下一种字体
-        fontRowIndex = (fontRowIndex + 1) % 5
-        print(fontNames[fontRowIndex])
-        title = fontNames[fontRowIndex]
-        fontTableView.reloadData()
-    }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -45,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = fontNames[fontRowIndex]
+        title = fontNames[fontNamesIndex]
         
         fontTableView.dataSource = self
         fontTableView.delegate = self
@@ -56,7 +49,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
         
-        changeFontButton.layer.cornerRadius = 55
+        changeFontButton.layer.cornerRadius = changeFontButton.frame.size.width/2
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -68,18 +61,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 1
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = fontTableView.dequeueReusableCell(withIdentifier: "FontCell", for: indexPath)
         let text = data[indexPath.row]
         cell.textLabel?.text = text
         cell.textLabel?.textColor = UIColor.white
-        cell.textLabel?.font = UIFont(name:fontNames[fontRowIndex], size:16)
+        cell.textLabel?.font = UIFont(name:fontNames[fontNamesIndex], size:16)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+    @IBAction func changeFontTouch(_ sender: Any) {
+        //循环切换下一种字体
+        fontNamesIndex = (fontNamesIndex + 1) % fontNames.count
+        print(fontNames[fontNamesIndex])
+        title = fontNames[fontNamesIndex]
+        fontTableView.reloadData()
     }
-    
 }
 
