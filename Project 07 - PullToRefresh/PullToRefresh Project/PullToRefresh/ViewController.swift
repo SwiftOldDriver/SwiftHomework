@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var tableView: UITableView?
+    var tableView = UITableView()
     let refreshControl = UIRefreshControl()
     let reuseIdentifier = "reuseIdentifier"
     var emojiData = [String]()
@@ -23,13 +23,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         setupTableView()
         setupRefreshControl()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.frame = view.frame
+    }
     
     // MARK: - Setup
 
     private func setupTableView() {
-        self.tableView = UITableView(frame: view.frame, style: .plain)
-        let tableView = self.tableView!
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
@@ -38,7 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     private func setupRefreshControl() {
-        tableView?.refreshControl = refreshControl
+        tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(ViewController.refreshTableView), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "Last updated on \(Date())", attributes: [:])
     }
@@ -68,11 +70,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     internal func tableView(_ _: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView?.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        cell?.textLabel?.text = emojiData[indexPath.row]
-        cell?.textLabel?.font = UIFont.systemFont(ofSize: 40)
-        cell?.textLabel?.textAlignment = .center
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        cell.textLabel?.text = emojiData[indexPath.row]
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 40)
+        cell.textLabel?.textAlignment = .center
+        return cell
     }
 
     
@@ -87,7 +89,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func refreshTableView() {
         emojiData.insert(contentsOf: randomEmojiData(), at: 0)
-        tableView?.reloadSections(IndexSet(arrayLiteral:0), with: .automatic)
+        tableView.reloadSections(IndexSet(arrayLiteral:0), with: .automatic)
         refreshControl.endRefreshing()
     }
 }
