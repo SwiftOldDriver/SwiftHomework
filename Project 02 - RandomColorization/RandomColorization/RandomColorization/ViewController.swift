@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     private var timer: Timer?
     private lazy var audioPlayer: AVAudioPlayer = {
         var player = AVAudioPlayer()
-        let musicURL = URL(fileURLWithPath: Bundle.main.path(forResource: "Ecstasy", ofType: "mp3")!)
-        
+        let musicURL = URL(fileURLWithPath: Bundle.main.path(forResource: "Ecstasy",
+                                                             ofType: "mp3")!)
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
@@ -45,23 +45,21 @@ class ViewController: UIViewController {
     }()
     
     @IBAction func playButtonPressed(_ sender: UIButton) {
-        switch audioPlayer.isPlaying {
-            case false:
-                timer = Timer.scheduledTimer(timeInterval: 0.2,
-                                             target: self,
-                                             selector: #selector(self.randomColor),
-                                             userInfo: nil,
-                                             repeats: true)
-                audioPlayer.prepareToPlay()
-                audioPlayer.play()
-            
-            case true:
-                guard let timer = timer else {
-                    fatalError()
-                }
-                timer.invalidate()
-                audioPlayer.pause()
+        if audioPlayer.isPlaying {
+            guard let timer = timer else {
+                fatalError()
             }
+            timer.invalidate()
+            audioPlayer.pause()
+        } else {
+            timer = Timer.scheduledTimer(timeInterval: 0.2,
+                                         target: self,
+                                         selector: #selector(self.randomColor),
+                                         userInfo: nil,
+                                         repeats: true)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        }
     }
     
     override func viewDidLoad() {
