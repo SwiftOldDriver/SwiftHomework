@@ -38,7 +38,7 @@ extension MasterViewController:UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return jokes?.count ?? 0
+        return jokes.count 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -48,9 +48,7 @@ extension MasterViewController:UICollectionViewDataSource{
                 fatalError("unexpected cell in storyboard")
         }
         
-        if let joke = jokes?[indexPath.item]{
-            cell.joke = joke
-        }
+        cell.joke = jokes[indexPath.item]
         return cell;
     }
 

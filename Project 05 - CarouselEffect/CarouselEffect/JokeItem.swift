@@ -28,7 +28,7 @@ class JokeItem {
 
 class JokeFactory {
 
-    static func createJokes()->[JokeItem]?{
+    static func createJokes()->[JokeItem] {
         return [
             JokeItem(title: "Hello there, i miss u.", content: "We love backpack and adventures! We walked to Antartica yesterday, and camped with some cute pinguines, and talked about this wonderful app idea. 🐧⛺️✨", featuredImage: UIImage(named: "hello")!),
             JokeItem(title: "🐳🐳🐳🐳🐳", content: "We love romantic stories. We walked to Antartica yesterday, and camped with some cute pinguines, and talked about this wonderful app idea. 🐧⛺️✨", featuredImage: UIImage(named: "dudu")!),
