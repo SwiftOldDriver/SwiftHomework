@@ -40,9 +40,7 @@ class ViewController: UIViewController {
         guard let path = Bundle.main.path(forResource: "moments", ofType: "mp4") else {
             return
         }
-        let url = URL(fileURLWithPath: path)
-        let playerItem =  AVPlayerItem(url: url)
-        player = AVPlayer.init(playerItem: playerItem)
+        player = AVPlayer.init(url: URL(fileURLWithPath: path))
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.repeatDuration = playerLayer.duration
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
