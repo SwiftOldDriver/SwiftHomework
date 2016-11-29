@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsItem {
+struct NewsItem {
     
     var title = ""
     var author = ""

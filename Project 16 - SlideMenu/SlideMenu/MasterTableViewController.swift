@@ -11,6 +11,7 @@ import UIKit
 class MasterTableViewController: UITableViewController {
     
     let menuTransitionManager = MenuTransitionManager()
+    
     private var newsGroup = [
         NewsItem(title: "Love mountain.", author: "Allen Wang", authorImage: UIImage(named: "a")!, coverImage: UIImage(named: "1")!),
         NewsItem(title: "New graphic design - LIVE FREE", author: "Cole", authorImage: UIImage(named: "b")!, coverImage: UIImage(named: "2")!),
@@ -25,9 +26,11 @@ class MasterTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        menuTransitionManager.delegate = self
         title = "Everyday Moments"
         tableView.separatorStyle = .none
         view.backgroundColor = UIColor(red:0.062, green:0.062, blue:0.07, alpha:1)
+        
     }
 
     // MARK: - Table view data source
@@ -70,7 +73,6 @@ class MasterTableViewController: UITableViewController {
         if let menuTableViewController = segue.destination as? MenuTableViewController {
             menuTableViewController.currentItem = title!
             menuTableViewController.transitioningDelegate = menuTransitionManager
-            menuTransitionManager.delegate = self
         }
     }
 }
