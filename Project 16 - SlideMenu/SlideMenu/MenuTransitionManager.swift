@@ -48,7 +48,6 @@ class MenuTransitionManager: NSObject,UIViewControllerAnimatedTransitioning {
             container.addSubview(toView)
             container.addSubview(snapshot!)
         }
-        
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: {
             
             if self.isPresenting {
@@ -75,13 +74,11 @@ class MenuTransitionManager: NSObject,UIViewControllerAnimatedTransitioning {
 extension MenuTransitionManager: UIViewControllerTransitioningDelegate {
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
         isPresenting = false
         return self
     }
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {        
         isPresenting = true
         return self
     }

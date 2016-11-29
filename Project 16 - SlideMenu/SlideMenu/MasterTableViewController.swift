@@ -43,13 +43,11 @@ class MasterTableViewController: UITableViewController {
         return newsGroup.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:MasterTableViewCell.self), for: indexPath) as? MasterTableViewCell
             else {
                 fatalError("unexpected cell in storyboard")
         }
-        
         let news = newsGroup[indexPath.item]
         cell.backgroundColor = .clear
         cell.avatarImageView.image = news.authorImage
@@ -69,7 +67,6 @@ class MasterTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let menuTableViewController = segue.destination as? MenuTableViewController {
             menuTableViewController.currentItem = title!
             menuTableViewController.transitioningDelegate = menuTransitionManager
