@@ -15,11 +15,11 @@ import UIKit
 
 class MenuTransitionManager: NSObject,UIViewControllerAnimatedTransitioning {
     
-    var delegate:MenuTransitionManagerDelegate?
+    var delegate: MenuTransitionManagerDelegate?
     
     var duration = 0.5
     var isPresenting = false
-    var snapshot:UIView? {
+    var snapshot: UIView? {
         didSet{
             if let delegate = delegate {
                 let tapGestureRecognizer = UITapGestureRecognizer(target: delegate, action: #selector(MenuTransitionManagerDelegate.dismiss))

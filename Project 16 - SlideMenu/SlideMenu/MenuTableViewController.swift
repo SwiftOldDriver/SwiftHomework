@@ -23,16 +23,11 @@ class MenuTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:MenuTableViewCell.self), for: indexPath) as? MenuTableViewCell
             else {
                 fatalError("unexpected cell in storyboard")
@@ -48,8 +43,7 @@ class MenuTableViewController: UITableViewController {
     
     // MARK: - Storyboard Segue
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {        
         guard let menuTableViewController = segue.source as? MenuTableViewController else {
             return
         }

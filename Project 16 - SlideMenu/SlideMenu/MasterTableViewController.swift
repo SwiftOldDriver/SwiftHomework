@@ -11,7 +11,13 @@ import UIKit
 class MasterTableViewController: UITableViewController {
     
     let menuTransitionManager = MenuTransitionManager()
-    fileprivate var newsGroup = NewsFactory.createNews()
+    private var newsGroup = [
+        NewsItem(title: "Love mountain.", author: "Allen Wang", authorImage: UIImage(named: "a")!, coverImage: UIImage(named: "1")!),
+        NewsItem(title: "New graphic design - LIVE FREE", author: "Cole", authorImage: UIImage(named: "b")!, coverImage: UIImage(named: "2")!),
+        NewsItem(title: "Summer sand", author: "Daniel Hooper", authorImage: UIImage(named: "c")!, coverImage: UIImage(named: "3")!),
+        NewsItem(title: "Seeking for signal", author: "Noby-Wan Kenobi", authorImage: UIImage(named: "d")!, coverImage: UIImage(named: "4")!),
+        ]
+
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -24,11 +30,6 @@ class MasterTableViewController: UITableViewController {
         tableView.separatorStyle = .none
         view.backgroundColor = UIColor(red:0.062, green:0.062, blue:0.07, alpha:1)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
 
     // MARK: - Table view data source
     
@@ -47,30 +48,32 @@ class MasterTableViewController: UITableViewController {
                 fatalError("unexpected cell in storyboard")
         }
         
+        let news = newsGroup[indexPath.item]
         cell.backgroundColor = .clear
-        cell.news = newsGroup[indexPath.item]
-        
+        cell.avatarImageView.image = news.authorImage
+        cell.coverImageView.image = news.coverImage
+        cell.titleLabel.text = news.title
+        cell.authorLabel.text = news.author
+
         return cell
     }
-    
     
     // MARK: - Storyboard Segue
     
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {
-        if let sourceController = segue.source as? MenuTableViewController{
+        if let sourceController = segue.source as? MenuTableViewController {
             title = sourceController.currentItem
         }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let menuTableViewController = segue.destination as? MenuTableViewController{
+        if let menuTableViewController = segue.destination as? MenuTableViewController {
             menuTableViewController.currentItem = title!
             menuTableViewController.transitioningDelegate = menuTransitionManager
             menuTransitionManager.delegate = self
         }
     }
-        
 }
 
 extension MasterTableViewController:MenuTransitionManagerDelegate {
