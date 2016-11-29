@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8049F9701DEDB25D00D8BDE9 /* moments.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8049F96E1DEDB19000D8BDE9 /* moments.mp4 */; };
 		808489EF1DEBD15400B3C92A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808489EE1DEBD15400B3C92A /* AppDelegate.swift */; };
 		808489F11DEBD15400B3C92A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808489F01DEBD15400B3C92A /* ViewController.swift */; };
 		808489F41DEBD15400B3C92A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808489F21DEBD15400B3C92A /* Main.storyboard */; };
 		808489F61DEBD15400B3C92A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 808489F51DEBD15400B3C92A /* Assets.xcassets */; };
 		808489F91DEBD15400B3C92A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808489F71DEBD15400B3C92A /* LaunchScreen.storyboard */; };
-		80848A011DEC51C800B3C92A /* moments.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 80848A001DEC51C800B3C92A /* moments.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8049F9281DEC5BE400D8BDE9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8049F96E1DEDB19000D8BDE9 /* moments.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moments.mp4; sourceTree = "<group>"; };
 		808489EB1DEBD15400B3C92A /* SpotifyVideoBackground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyVideoBackground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		808489EE1DEBD15400B3C92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		808489F01DEBD15400B3C92A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,7 +25,6 @@
 		808489F51DEBD15400B3C92A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		808489F81DEBD15400B3C92A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		808489FA1DEBD15400B3C92A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80848A001DEC51C800B3C92A /* moments.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = moments.mp4; path = ../../../../moments.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +71,8 @@
 				808489F21DEBD15400B3C92A /* Main.storyboard */,
 				808489F51DEBD15400B3C92A /* Assets.xcassets */,
 				808489F71DEBD15400B3C92A /* LaunchScreen.storyboard */,
-				80848A001DEC51C800B3C92A /* moments.mp4 */,
 				808489FA1DEBD15400B3C92A /* Info.plist */,
+				8049F96E1DEDB19000D8BDE9 /* moments.mp4 */,
 			);
 			path = SpotifyVideoBackground;
 			sourceTree = "<group>";
@@ -137,8 +137,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8049F9701DEDB25D00D8BDE9 /* moments.mp4 in Resources */,
 				808489F91DEBD15400B3C92A /* LaunchScreen.storyboard in Resources */,
-				80848A011DEC51C800B3C92A /* moments.mp4 in Resources */,
 				808489F61DEBD15400B3C92A /* Assets.xcassets in Resources */,
 				808489F41DEBD15400B3C92A /* Main.storyboard in Resources */,
 			);
