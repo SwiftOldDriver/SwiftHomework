@@ -12,8 +12,6 @@
 		DFCDE4111DE8485D003AF2E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCDE40F1DE8485D003AF2E3 /* Main.storyboard */; };
 		DFCDE4131DE8485D003AF2E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCDE4121DE8485D003AF2E3 /* Assets.xcassets */; };
 		DFCDE4161DE8485D003AF2E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCDE4141DE8485D003AF2E3 /* LaunchScreen.storyboard */; };
-		DFCDE4211DE8485D003AF2E3 /* CarouselEffectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDE4201DE8485D003AF2E3 /* CarouselEffectTests.swift */; };
-		DFCDE42C1DE8485D003AF2E3 /* CarouselEffectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDE42B1DE8485D003AF2E3 /* CarouselEffectUITests.swift */; };
 		DFCDE43A1DE84895003AF2E3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDE4391DE84895003AF2E3 /* MasterViewController.swift */; };
 		DFCDE43D1DE8489B003AF2E3 /* JokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDE43B1DE8489B003AF2E3 /* JokeCell.swift */; };
 		DFCDE43E1DE8489B003AF2E3 /* JokeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDE43C1DE8489B003AF2E3 /* JokeItem.swift */; };
@@ -45,11 +43,7 @@
 		DFCDE4151DE8485D003AF2E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFCDE4171DE8485D003AF2E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFCDE41C1DE8485D003AF2E3 /* CarouselEffectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarouselEffectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFCDE4201DE8485D003AF2E3 /* CarouselEffectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselEffectTests.swift; sourceTree = "<group>"; };
-		DFCDE4221DE8485D003AF2E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFCDE4271DE8485D003AF2E3 /* CarouselEffectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarouselEffectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFCDE42B1DE8485D003AF2E3 /* CarouselEffectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselEffectUITests.swift; sourceTree = "<group>"; };
-		DFCDE42D1DE8485D003AF2E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFCDE4391DE84895003AF2E3 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		DFCDE43B1DE8489B003AF2E3 /* JokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeCell.swift; sourceTree = "<group>"; };
 		DFCDE43C1DE8489B003AF2E3 /* JokeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeItem.swift; sourceTree = "<group>"; };
@@ -84,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				DFCDE40A1DE8485D003AF2E3 /* CarouselEffect */,
-				DFCDE41F1DE8485D003AF2E3 /* CarouselEffectTests */,
-				DFCDE42A1DE8485D003AF2E3 /* CarouselEffectUITests */,
 				DFCDE4091DE8485D003AF2E3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,24 +106,6 @@
 				DFCDE4171DE8485D003AF2E3 /* Info.plist */,
 			);
 			path = CarouselEffect;
-			sourceTree = "<group>";
-		};
-		DFCDE41F1DE8485D003AF2E3 /* CarouselEffectTests */ = {
-			isa = PBXGroup;
-			children = (
-				DFCDE4201DE8485D003AF2E3 /* CarouselEffectTests.swift */,
-				DFCDE4221DE8485D003AF2E3 /* Info.plist */,
-			);
-			path = CarouselEffectTests;
-			sourceTree = "<group>";
-		};
-		DFCDE42A1DE8485D003AF2E3 /* CarouselEffectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DFCDE42B1DE8485D003AF2E3 /* CarouselEffectUITests.swift */,
-				DFCDE42D1DE8485D003AF2E3 /* Info.plist */,
-			);
-			path = CarouselEffectUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFCDE4211DE8485D003AF2E3 /* CarouselEffectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +264,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFCDE42C1DE8485D003AF2E3 /* CarouselEffectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
