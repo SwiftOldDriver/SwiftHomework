@@ -19,21 +19,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您可以左滑看看" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmF-BZ-1ju">
-                    <rect key="frame" x="126.5" y="583" width="122" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="E7s-K5-YIz"/>
-                        <constraint firstAttribute="width" constant="122" id="V0o-Hi-wfd"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="GpA-ch-bG7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="cmF-BZ-1ju" secondAttribute="bottom" constant="64" id="gHm-yH-cM3"/>
-                <constraint firstItem="cmF-BZ-1ju" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sxd-4h-MyQ"/>
+                <constraint firstAttribute="trailing" secondItem="GpA-ch-bG7" secondAttribute="trailing" id="1bz-iv-3Wh"/>
+                <constraint firstItem="GpA-ch-bG7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="apf-Ac-N5G"/>
+                <constraint firstAttribute="bottom" secondItem="GpA-ch-bG7" secondAttribute="bottom" id="inQ-MC-luK"/>
+                <constraint firstItem="GpA-ch-bG7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="n7k-fk-UNs"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="left" width="320" height="568"/>
+    </resources>
 </document>

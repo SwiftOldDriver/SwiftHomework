@@ -19,22 +19,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您可以右滑看看" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hu-R2-a2h">
-                    <rect key="frame" x="126" y="583" width="122" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="6jT-2r-66F"/>
-                        <constraint firstAttribute="width" constant="122" id="FEq-oY-c9A"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="wKX-eV-GMw">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="7hu-R2-a2h" secondAttribute="bottom" constant="64" id="4c7-JO-NwN"/>
-                <constraint firstItem="7hu-R2-a2h" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="H2l-6h-XUX"/>
+                <constraint firstAttribute="trailing" secondItem="wKX-eV-GMw" secondAttribute="trailing" id="R94-Sl-i0e"/>
+                <constraint firstAttribute="bottom" secondItem="wKX-eV-GMw" secondAttribute="bottom" id="T6k-13-4qs"/>
+                <constraint firstItem="wKX-eV-GMw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a04-ZD-akj"/>
+                <constraint firstItem="wKX-eV-GMw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uze-RI-bHQ"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="right" width="320" height="568"/>
+    </resources>
 </document>
