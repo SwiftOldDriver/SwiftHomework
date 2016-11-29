@@ -50,10 +50,7 @@ class MasterTableViewController: UITableViewController {
         }
         let news = newsGroup[indexPath.item]
         cell.backgroundColor = .clear
-        cell.avatarImageView.image = news.authorImage
-        cell.coverImageView.image = news.coverImage
-        cell.titleLabel.text = news.title
-        cell.authorLabel.text = news.author
+        cell.bind(news: news)
 
         return cell
     }

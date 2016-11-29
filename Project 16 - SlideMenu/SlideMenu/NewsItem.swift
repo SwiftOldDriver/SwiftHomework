@@ -15,10 +15,4 @@ struct NewsItem {
     var authorImage: UIImage?
     var coverImage: UIImage?
     
-    init(title: String, author: String, authorImage: UIImage,coverImage: UIImage) {
-        self.title = title
-        self.author = author
-        self.coverImage = coverImage
-        self.authorImage = authorImage
-    }
 }

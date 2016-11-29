@@ -8,9 +8,6 @@
 
 import UIKit
 
-
-
-
 class MasterTableViewCell: UITableViewCell {
     
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -21,5 +18,12 @@ class MasterTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2
         avatarImageView.layer.masksToBounds = true
+    }
+    
+    func bind(news: NewsItem) {
+        avatarImageView.image = news.authorImage
+        coverImageView.image = news.coverImage
+        titleLabel.text = news.title
+        authorLabel.text = news.author
     }
 }
