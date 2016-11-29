@@ -17,7 +17,6 @@ class MasterTableViewController: UITableViewController {
         NewsItem(title: "Summer sand", author: "Daniel Hooper", authorImage: UIImage(named: "c")!, coverImage: UIImage(named: "3")!),
         NewsItem(title: "Seeking for signal", author: "Noby-Wan Kenobi", authorImage: UIImage(named: "d")!, coverImage: UIImage(named: "4")!),
         ]
-
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
