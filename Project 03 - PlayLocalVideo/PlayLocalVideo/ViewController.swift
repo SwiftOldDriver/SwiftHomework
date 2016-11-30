@@ -31,18 +31,22 @@ class ViewController: UIViewController {
     @IBAction func playVideoButtonDidTouch(_ sender: Any) {
         if let path = Bundle.main.path(forResource: "emoji zone", ofType: "mp4") {
             let playViewController = AVPlayerViewController()
-            let player = AVPlayer(url: URL(fileURLWithPath: path))
-            playViewController.player = player
+            let playerView = AVPlayer(url: URL(fileURLWithPath: path))
+            playViewController.player = playerView
             present(playViewController, animated: true) {
                 playViewController.player?.play()
             }
         }
     }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
 
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
