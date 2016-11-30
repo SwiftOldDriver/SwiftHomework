@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  AnimateTable
+//  CollectionViewAnimation
 //
-//  Created by Jiar on 2016/11/28.
+//  Created by Jiar on 2016/11/29.
 //  Copyright © 2016年 Jiar. All rights reserved.
 //
 
