@@ -25,7 +25,6 @@ final class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 5
     }
     
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
