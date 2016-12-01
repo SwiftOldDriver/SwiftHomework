@@ -12,7 +12,7 @@ class MasterTableViewController: UITableViewController {
     
     let menuTransitionManager = MenuTransitionManager()
     
-    private var newsGroup = [
+    private let newsGroup = [
         NewsItem(title: "Love mountain.", author: "Allen Wang", authorImage: UIImage(named: "a")!, coverImage: UIImage(named: "1")!),
         NewsItem(title: "New graphic design - LIVE FREE", author: "Cole", authorImage: UIImage(named: "b")!, coverImage: UIImage(named: "2")!),
         NewsItem(title: "Summer sand", author: "Daniel Hooper", authorImage: UIImage(named: "c")!, coverImage: UIImage(named: "3")!),
@@ -27,7 +27,7 @@ class MasterTableViewController: UITableViewController {
         super.viewDidLoad()
         
         menuTransitionManager.delegate = self
-        title = "Everyday Moments"
+        title = titles.first
         tableView.separatorStyle = .none
         view.backgroundColor = UIColor(red:0.062, green:0.062, blue:0.07, alpha:1)
         
@@ -51,7 +51,6 @@ class MasterTableViewController: UITableViewController {
         let news = newsGroup[indexPath.item]
         cell.backgroundColor = .clear
         cell.bind(news: news)
-
         return cell
     }
     
@@ -76,5 +75,15 @@ extension MasterTableViewController:MenuTransitionManagerDelegate {
     // MARK: - MenuTransitionManager Delegate
     func dismiss() {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+fileprivate extension MasterTableViewCell {
+    
+    func bind(news: NewsItem) {
+        avatarImageView.image = news.authorImage
+        coverImageView.image = news.coverImage
+        titleLabel.text = news.title
+        authorLabel.text = news.author
     }
 }

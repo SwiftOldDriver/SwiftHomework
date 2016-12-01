@@ -8,10 +8,12 @@
 
 import UIKit
 
+let titles = ["Everyday Moments", "Popular", "Editors", "Upcoming", "Fresh", "Stock-photos", "Trending"]
+
 class MenuTableViewController: UITableViewController {
     
-    var menuItems = ["Everyday Moments", "Popular", "Editors", "Upcoming", "Fresh", "Stock-photos", "Trending"]
-    var currentItem = "Everyday Moments"
+    
+    var currentItem = titles.first
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class MenuTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuItems.count
+        return titles.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,10 +35,9 @@ class MenuTableViewController: UITableViewController {
                 fatalError("unexpected cell in storyboard")
         }
         
-        cell.titleLabel.text = menuItems[indexPath.row]
-        cell.titleLabel.textColor = (menuItems[indexPath.row] == currentItem) ? .white : .gray
-        cell.backgroundColor = .clear
-        
+        cell.titleLabel.text = titles[indexPath.row]
+        cell.titleLabel.textColor = (titles[indexPath.row] == currentItem) ? .white : .gray
+        cell.backgroundColor = .clear        
         return cell
     }
     
@@ -48,7 +49,7 @@ class MenuTableViewController: UITableViewController {
             return
         }
         if let selectedRow = menuTableViewController.tableView.indexPathForSelectedRow?.row {
-            currentItem = menuItems[selectedRow]
+            currentItem = titles[selectedRow]
         }
     }
 }
