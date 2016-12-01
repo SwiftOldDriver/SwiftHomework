@@ -7,23 +7,23 @@
 //
 
 import UIKit
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
     let dataArray = ["😂", "🤗", "😳", "😌", "😊"]
     
     let refreshController = UIRefreshControl()
-    var customView:UIView!
+    var customView: UIView!
     var isAnimating = false
     
-    var labelsArray: Array<UILabel> = []
+    var labelsArray: [UILabel] = []
     var currentColorIndex = 0
     var currentLabelIndex = 0
     
     var timer: Timer?
     
-    let colorsArray: [UIColor] = [.magenta, .brown, .yellow, .red, .green, .blue, .orange]
+    let transformColors: [UIColor] = [.magenta, .brown, .yellow, .red, .green, .blue, .orange]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,23 +39,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         loadCustomRefreshContents()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "idCell", for: indexPath)
-        cell.textLabel?.text = dataArray[indexPath.row]
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 35)
-        cell.textLabel?.textAlignment = .center
-        return cell
-    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if refreshController.isRefreshing {
-            startRefresh(startRefreshing: {
-                doSomething()
-            })
+            startRefresh(then: doSomething)
         }
     }
     
@@ -63,8 +51,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func loadCustomRefreshContents() {
         customView = Bundle.main.loadNibNamed("RefreshContents", owner: self, options: nil)?.last as! UIView
         customView.frame = refreshController.bounds
-        
-        for i in 1 ... customView.subviews.count  {
+
+        for i in 1...12  {
             if let label = customView.viewWithTag(i) as? UILabel{
                 labelsArray.append(label)
             }
@@ -75,20 +63,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     func doSomething() {
         timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(ViewController.endOfWork), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(ViewController.finished), userInfo: nil, repeats: true)
     }
     
-    func endOfWork() {
+    func finished() {
         endRefresh()
         
         timer?.invalidate()
         timer = nil
     }
     
-    func startRefresh(startRefreshing:() -> ()) {
+    func startRefresh(then:() -> ()) {
         if !isAnimating {
             animateRefreshStep1()
-            startRefreshing()
+            then()
         }
         
     }
@@ -135,16 +123,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func animateRefreshStep2() {
         UIView.animate(withDuration: 0.40, delay: 0.0, options: .curveLinear, animations: { () -> Void in
             
-            for label in self.labelsArray {
+            self.labelsArray.forEach({ (label) in
                 label.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-            }
+            })
             
         }, completion: { (finished) -> Void in
             
             UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveLinear, animations: { () -> Void in
-                for label in self.labelsArray {
+                self.labelsArray.forEach({ (label) in
                     label.transform = .identity
-                }
+                })
                 
             }, completion: { (finished) -> Void in
                 if self.refreshController.isRefreshing {
@@ -152,10 +140,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 }
                 else {
                     self.isAnimating = false
-                    for label in self.labelsArray {
+                    self.labelsArray.forEach({ (label) in
                         label.textColor = .black
                         label.transform = .identity
-                    }
+                    })
                 }
             })
         })
@@ -163,11 +151,23 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func getCurrentColor() -> UIColor {
         //获取当前颜色
-        let returnColor = colorsArray[currentColorIndex]
+        let returnColor = transformColors[currentColorIndex]
         //设置下一个颜色的游标
-        currentColorIndex = (currentColorIndex + 1)%colorsArray.count
+        currentColorIndex = (currentColorIndex + 1)%transformColors.count
         return returnColor
     }
 }
-
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "idCell", for: indexPath)
+        cell.textLabel?.text = dataArray[indexPath.row]
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 35)
+        cell.textLabel?.textAlignment = .center
+        return cell
+    }
+}
 
