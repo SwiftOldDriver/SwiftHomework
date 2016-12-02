@@ -23,12 +23,12 @@ class ViewController: UIViewController,UITableViewDelegate {
     let transformColors: [UIColor] = [.magenta, .brown, .yellow, .red, .green, .blue, .orange]
     var currentColorIndex = 0
     
-    lazy var currentColor: () -> UIColor = {
+    var currentColor: UIColor {
         //获取当前颜色
-        let returnColor = self.transformColors[self.currentColorIndex]
+        let color = transformColors[currentColorIndex]
         //设置下一个颜色的游标
-        self.currentColorIndex = (self.currentColorIndex + 1) % self.transformColors.count
-        return returnColor
+        currentColorIndex = (currentColorIndex + 1) % transformColors.count
+        return color
     }
     
     override func viewDidLoad() {
@@ -90,7 +90,7 @@ class ViewController: UIViewController,UITableViewDelegate {
         
         UIView.animate(withDuration: 0.1, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
             self.labelsArray[self.currentLabelIndex].transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_4))
-            self.labelsArray[self.currentLabelIndex].textColor = self.currentColor()
+            self.labelsArray[self.currentLabelIndex].textColor = self.currentColor
         }, completion: { (finished) -> Void in
             UIView.animate(withDuration: 0.05, delay: 0.0, options: .curveLinear, animations: { () -> Void in
                 self.labelsArray[self.currentLabelIndex].transform = .identity
