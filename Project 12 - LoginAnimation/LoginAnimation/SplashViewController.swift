@@ -10,8 +10,8 @@
 import UIKit
 
 final class SplashViewController: UIViewController {
-
-    @IBOutlet weak var signupButton: UIButton!
+    
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -20,10 +20,8 @@ final class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        signupButton.layer.cornerRadius = 5
-        signupButton.layer.masksToBounds = true
+        signUpButton.layer.cornerRadius = 5
         loginButton.layer.cornerRadius = 5
-        loginButton.layer.masksToBounds = true
     }
     
 }
