@@ -87,7 +87,7 @@ final class LoginViewController: UIViewController {
                        initialSpringVelocity: 10,
                        options: UIViewAnimationOptions.curveLinear,
                        animations: {
-                        self.loginButton.bounds = CGRect(x: bounds.origin.x - 20, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
+                        self.loginButton.bounds = CGRect(x: bounds.origin.x - 30, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
                         self.loginButton.isEnabled = false
             }, completion: { finished in
                 if finished {
