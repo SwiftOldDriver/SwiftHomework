@@ -13,7 +13,6 @@ class TableViewController: UITableViewController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBarItem()
-        
     }
 
     private func setupTabBarItem() {
@@ -51,9 +50,7 @@ class TableViewController: UITableViewController, UITabBarControllerDelegate {
             return 321
         }
     }
-    
-    
-    
+
     // MARK: - TabbarController Delegate
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
