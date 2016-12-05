@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C939410F1DEFE0C000953FA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939410E1DEFE0C000953FA6 /* LoginViewController.swift */; };
-		C93941131DEFE41400953FA6 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93941121DEFE41400953FA6 /* SplashViewController.swift */; };
-		C97D8F7C1DEBE31E007DCD06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D8F7B1DEBE31E007DCD06 /* AppDelegate.swift */; };
-		C97D8F811DEBE31E007DCD06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97D8F7F1DEBE31E007DCD06 /* Main.storyboard */; };
-		C97D8F831DEBE31E007DCD06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97D8F821DEBE31E007DCD06 /* Assets.xcassets */; };
-		C97D8F861DEBE31E007DCD06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97D8F841DEBE31E007DCD06 /* LaunchScreen.storyboard */; };
+		C9E7EE691DF5847100611CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E7EE681DF5847100611CE3 /* AppDelegate.swift */; };
+		C9E7EE6B1DF5847100611CE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E7EE6A1DF5847100611CE3 /* ViewController.swift */; };
+		C9E7EE6E1DF5847100611CE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E7EE6C1DF5847100611CE3 /* Main.storyboard */; };
+		C9E7EE701DF5847100611CE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E7EE6F1DF5847100611CE3 /* Assets.xcassets */; };
+		C9E7EE731DF5847100611CE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E7EE711DF5847100611CE3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C939410E1DEFE0C000953FA6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C93941121DEFE41400953FA6 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		C97D8F781DEBE31E007DCD06 /* LoginAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C97D8F7B1DEBE31E007DCD06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C97D8F801DEBE31E007DCD06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C97D8F821DEBE31E007DCD06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C97D8F851DEBE31E007DCD06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C97D8F871DEBE31E007DCD06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E7EE651DF5847100611CE3 /* SwipeableCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeableCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9E7EE681DF5847100611CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9E7EE6A1DF5847100611CE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9E7EE6D1DF5847100611CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9E7EE6F1DF5847100611CE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9E7EE721DF5847100611CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9E7EE741DF5847100611CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C97D8F751DEBE31E007DCD06 /* Frameworks */ = {
+		C9E7EE621DF5846F00611CE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,73 +35,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C97D8F6F1DEBE31E007DCD06 = {
+		C9E7EE5C1DF5846F00611CE3 = {
 			isa = PBXGroup;
 			children = (
-				C97D8F7A1DEBE31E007DCD06 /* LoginAnimation */,
-				C97D8F791DEBE31E007DCD06 /* Products */,
+				C9E7EE671DF5847100611CE3 /* SwipeableCell */,
+				C9E7EE661DF5847100611CE3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C97D8F791DEBE31E007DCD06 /* Products */ = {
+		C9E7EE661DF5847100611CE3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C97D8F781DEBE31E007DCD06 /* LoginAnimation.app */,
+				C9E7EE651DF5847100611CE3 /* SwipeableCell.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C97D8F7A1DEBE31E007DCD06 /* LoginAnimation */ = {
+		C9E7EE671DF5847100611CE3 /* SwipeableCell */ = {
 			isa = PBXGroup;
 			children = (
-				C97D8F7B1DEBE31E007DCD06 /* AppDelegate.swift */,
-				C93941121DEFE41400953FA6 /* SplashViewController.swift */,
-				C939410E1DEFE0C000953FA6 /* LoginViewController.swift */,
-				C97D8F7F1DEBE31E007DCD06 /* Main.storyboard */,
-				C97D8F821DEBE31E007DCD06 /* Assets.xcassets */,
-				C97D8F841DEBE31E007DCD06 /* LaunchScreen.storyboard */,
-				C97D8F871DEBE31E007DCD06 /* Info.plist */,
+				C9E7EE681DF5847100611CE3 /* AppDelegate.swift */,
+				C9E7EE6A1DF5847100611CE3 /* ViewController.swift */,
+				C9E7EE6C1DF5847100611CE3 /* Main.storyboard */,
+				C9E7EE6F1DF5847100611CE3 /* Assets.xcassets */,
+				C9E7EE711DF5847100611CE3 /* LaunchScreen.storyboard */,
+				C9E7EE741DF5847100611CE3 /* Info.plist */,
 			);
-			path = LoginAnimation;
+			path = SwipeableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C97D8F771DEBE31E007DCD06 /* LoginAnimation */ = {
+		C9E7EE641DF5846F00611CE3 /* SwipeableCell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C97D8F8A1DEBE31E007DCD06 /* Build configuration list for PBXNativeTarget "LoginAnimation" */;
+			buildConfigurationList = C9E7EE771DF5847100611CE3 /* Build configuration list for PBXNativeTarget "SwipeableCell" */;
 			buildPhases = (
-				C97D8F741DEBE31E007DCD06 /* Sources */,
-				C97D8F751DEBE31E007DCD06 /* Frameworks */,
-				C97D8F761DEBE31E007DCD06 /* Resources */,
+				C9E7EE611DF5846F00611CE3 /* Sources */,
+				C9E7EE621DF5846F00611CE3 /* Frameworks */,
+				C9E7EE631DF5846F00611CE3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = LoginAnimation;
-			productName = LoginAnimation;
-			productReference = C97D8F781DEBE31E007DCD06 /* LoginAnimation.app */;
+			name = SwipeableCell;
+			productName = SwipeableCell;
+			productReference = C9E7EE651DF5847100611CE3 /* SwipeableCell.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C97D8F701DEBE31E007DCD06 /* Project object */ = {
+		C9E7EE5D1DF5846F00611CE3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = TimberTang;
 				TargetAttributes = {
-					C97D8F771DEBE31E007DCD06 = {
-						CreatedOnToolsVersion = 8.1;
+					C9E7EE641DF5846F00611CE3 = {
+						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = C97D8F731DEBE31E007DCD06 /* Build configuration list for PBXProject "LoginAnimation" */;
+			buildConfigurationList = C9E7EE601DF5846F00611CE3 /* Build configuration list for PBXProject "SwipeableCell" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -111,55 +108,54 @@
 				en,
 				Base,
 			);
-			mainGroup = C97D8F6F1DEBE31E007DCD06;
-			productRefGroup = C97D8F791DEBE31E007DCD06 /* Products */;
+			mainGroup = C9E7EE5C1DF5846F00611CE3;
+			productRefGroup = C9E7EE661DF5847100611CE3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C97D8F771DEBE31E007DCD06 /* LoginAnimation */,
+				C9E7EE641DF5846F00611CE3 /* SwipeableCell */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C97D8F761DEBE31E007DCD06 /* Resources */ = {
+		C9E7EE631DF5846F00611CE3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C97D8F861DEBE31E007DCD06 /* LaunchScreen.storyboard in Resources */,
-				C97D8F831DEBE31E007DCD06 /* Assets.xcassets in Resources */,
-				C97D8F811DEBE31E007DCD06 /* Main.storyboard in Resources */,
+				C9E7EE731DF5847100611CE3 /* LaunchScreen.storyboard in Resources */,
+				C9E7EE701DF5847100611CE3 /* Assets.xcassets in Resources */,
+				C9E7EE6E1DF5847100611CE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C97D8F741DEBE31E007DCD06 /* Sources */ = {
+		C9E7EE611DF5846F00611CE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C939410F1DEFE0C000953FA6 /* LoginViewController.swift in Sources */,
-				C97D8F7C1DEBE31E007DCD06 /* AppDelegate.swift in Sources */,
-				C93941131DEFE41400953FA6 /* SplashViewController.swift in Sources */,
+				C9E7EE6B1DF5847100611CE3 /* ViewController.swift in Sources */,
+				C9E7EE691DF5847100611CE3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C97D8F7F1DEBE31E007DCD06 /* Main.storyboard */ = {
+		C9E7EE6C1DF5847100611CE3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C97D8F801DEBE31E007DCD06 /* Base */,
+				C9E7EE6D1DF5847100611CE3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C97D8F841DEBE31E007DCD06 /* LaunchScreen.storyboard */ = {
+		C9E7EE711DF5847100611CE3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C97D8F851DEBE31E007DCD06 /* Base */,
+				C9E7EE721DF5847100611CE3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -167,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C97D8F881DEBE31E007DCD06 /* Debug */ = {
+		C9E7EE751DF5847100611CE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -207,17 +203,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		C97D8F891DEBE31E007DCD06 /* Release */ = {
+		C9E7EE761DF5847100611CE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -251,36 +246,33 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		C97D8F8B1DEBE31E007DCD06 /* Debug */ = {
+		C9E7EE781DF5847100611CE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = LoginAnimation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				INFOPLIST_FILE = SwipeableCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TimberTang.LoginAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TimberTang.SwipeableCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		C97D8F8C1DEBE31E007DCD06 /* Release */ = {
+		C9E7EE791DF5847100611CE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = LoginAnimation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				INFOPLIST_FILE = SwipeableCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TimberTang.LoginAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TimberTang.SwipeableCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -289,25 +281,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C97D8F731DEBE31E007DCD06 /* Build configuration list for PBXProject "LoginAnimation" */ = {
+		C9E7EE601DF5846F00611CE3 /* Build configuration list for PBXProject "SwipeableCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C97D8F881DEBE31E007DCD06 /* Debug */,
-				C97D8F891DEBE31E007DCD06 /* Release */,
+				C9E7EE751DF5847100611CE3 /* Debug */,
+				C9E7EE761DF5847100611CE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C97D8F8A1DEBE31E007DCD06 /* Build configuration list for PBXNativeTarget "LoginAnimation" */ = {
+		C9E7EE771DF5847100611CE3 /* Build configuration list for PBXNativeTarget "SwipeableCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C97D8F8B1DEBE31E007DCD06 /* Debug */,
-				C97D8F8C1DEBE31E007DCD06 /* Release */,
+				C9E7EE781DF5847100611CE3 /* Debug */,
+				C9E7EE791DF5847100611CE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C97D8F701DEBE31E007DCD06 /* Project object */;
+	rootObject = C9E7EE5D1DF5846F00611CE3 /* Project object */;
 }

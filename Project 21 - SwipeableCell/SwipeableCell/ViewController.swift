@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  SlideMenu
+//  SwipeableCell
 //
-//  Created by 陈铭嘉 on 2016/11/29.
-//  Copyright © 2016年 com.Boolan. All rights reserved.
+//  Created by TimberTang on 16/12/5.
+//  Copyright © 2016年 TimberTang. All rights reserved.
 //
 
 import UIKit
