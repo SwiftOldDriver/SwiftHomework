@@ -20,10 +20,10 @@
                         <color key="sectionIndexBackgroundColor" red="0.11764705882352941" green="0.21176470588235294" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="207" id="DQM-Ss-vU7">
-                                <rect key="frame" x="0.0" y="56" width="414" height="207"/>
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="207"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DQM-Ss-vU7" id="iwT-KF-BFr">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="206"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="ayO-WJ-5L6">
@@ -58,10 +58,10 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier1" rowHeight="321" id="dvp-nr-GJQ">
-                                <rect key="frame" x="0.0" y="263" width="414" height="321"/>
+                                <rect key="frame" x="0.0" y="262.5" width="414" height="321"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dvp-nr-GJQ" id="pKI-5i-Ja0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="321"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MengTo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INZ-AE-Lp6">
@@ -104,12 +104,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlu-84-ybn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-480" y="120"/>
+            <point key="canvasLocation" x="-1026" y="-289"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="DXq-0f-ZjF">
             <objects>
-                <viewController id="7qN-cX-XDB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="7qN-cX-XDB" customClass="MenuViewController" customModule="TumblrMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vuv-wb-xK4"/>
                         <viewControllerLayoutGuide type="bottom" id="ZVb-NQ-FBE"/>
@@ -124,78 +124,110 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="och-cV-7Nr">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="360"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTU-Hd-CqJ">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTU-Hd-CqJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="jcn-nq-FVh"/>
                                                     <constraint firstAttribute="height" constant="120" id="sZE-V1-4sH"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="Text"/>
+                                                <inset key="titleEdgeInsets" minX="-100" minY="80" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Text" image="Text"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMr-dn-cuQ">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMr-dn-cuQ">
                                                 <rect key="frame" x="0.0" y="120" width="100" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="WZk-nQ-2Zz"/>
                                                     <constraint firstAttribute="width" constant="100" id="jxn-0s-Fd2"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="Quote"/>
+                                                <inset key="titleEdgeInsets" minX="-100" minY="80" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Quote" image="Quote"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itB-2J-6IH">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itB-2J-6IH">
                                                 <rect key="frame" x="0.0" y="240" width="100" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="JXF-F1-cOH"/>
                                                     <constraint firstAttribute="height" constant="120" id="dPn-UJ-wfr"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="Chat"/>
+                                                <inset key="titleEdgeInsets" minX="-100" minY="80" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Chat" image="Chat"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OGP-4F-ZTO">
                                         <rect key="frame" x="174" y="0.0" width="100" height="360"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uw5-BU-75d">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uw5-BU-75d">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="9qp-cF-Dd6"/>
                                                     <constraint firstAttribute="width" constant="100" id="nZT-38-WeZ"/>
                                                 </constraints>
-                                                <state key="normal" title="Photo" backgroundImage="Photo">
+                                                <inset key="titleEdgeInsets" minX="-100" minY="80" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Photo" image="Photo">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oc-En-Cvq">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oc-En-Cvq">
                                                 <rect key="frame" x="0.0" y="120" width="100" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="aFM-DI-NBd"/>
                                                     <constraint firstAttribute="height" constant="120" id="fou-ve-LDw"/>
                                                 </constraints>
+                                                <inset key="titleEdgeInsets" minX="-100" minY="80" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Link" image="Link"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrG-9f-27z">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrG-9f-27z">
                                                 <rect key="frame" x="0.0" y="240" width="100" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="TUi-J9-zoZ"/>
                                                     <constraint firstAttribute="height" constant="120" id="vtK-Yc-QbW"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="Audio"/>
+                                                <inset key="titleEdgeInsets" minX="-100" minY="80" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Audio" image="Audio"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.11764705882352941" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T17-Uh-C2G">
+                                <rect key="frame" x="152.66666666666669" y="524.66666666666663" width="109.00000000000006" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissSelf:" destination="7qN-cX-XDB" eventType="touchUpInside" id="Eba-8M-4rV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.074509803921568626" green="0.11764705882352941" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="T17-Uh-C2G" firstAttribute="centerY" secondItem="Wwh-eV-Ba9" secondAttribute="centerY" constant="180" id="FDB-Tr-lEN"/>
+                            <constraint firstItem="T17-Uh-C2G" firstAttribute="centerX" secondItem="Wwh-eV-Ba9" secondAttribute="centerX" id="Kqk-hI-k1L"/>
                             <constraint firstAttribute="trailing" secondItem="vZn-OO-n7Z" secondAttribute="trailing" constant="70" id="Mdr-p2-Gfg"/>
                             <constraint firstItem="vZn-OO-n7Z" firstAttribute="leading" secondItem="Wwh-eV-Ba9" secondAttribute="leading" constant="70" id="PhK-sx-FYr"/>
                             <constraint firstItem="vZn-OO-n7Z" firstAttribute="top" secondItem="Vuv-wb-xK4" secondAttribute="bottom" constant="90" id="uUq-8U-aSJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="leftButtons" destination="uTU-Hd-CqJ" collectionClass="NSMutableArray" id="ujy-LO-Mkc"/>
+                        <outletCollection property="leftButtons" destination="iMr-dn-cuQ" collectionClass="NSMutableArray" id="EdQ-9L-3oi"/>
+                        <outletCollection property="leftButtons" destination="itB-2J-6IH" collectionClass="NSMutableArray" id="z18-IY-aQW"/>
+                        <outletCollection property="rightButtons" destination="uw5-BU-75d" collectionClass="NSMutableArray" id="7yL-mX-h4p"/>
+                        <outletCollection property="rightButtons" destination="1oc-En-Cvq" collectionClass="NSMutableArray" id="kyZ-1l-OsN"/>
+                        <outletCollection property="rightButtons" destination="UrG-9f-27z" collectionClass="NSMutableArray" id="4ni-Pz-Af5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLy-qf-8TG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="120"/>
+            <point key="canvasLocation" x="-228" y="74"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bI3-YS-KEo">
@@ -212,7 +244,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npb-sn-eYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1378" y="-2"/>
+            <point key="canvasLocation" x="-1329" y="-156"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="FOW-8P-aN3">
@@ -230,7 +262,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwK-1j-mRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2120" y="-2"/>
+            <point key="canvasLocation" x="-1670" y="-57"/>
         </scene>
     </scenes>
     <resources>

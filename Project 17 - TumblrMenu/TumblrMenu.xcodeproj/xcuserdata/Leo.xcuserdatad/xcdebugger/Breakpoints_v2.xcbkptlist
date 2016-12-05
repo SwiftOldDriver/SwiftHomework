@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TumblrMenu/TableViewController.swift"
-            timestampString = "502102179.626938"
+            filePath = "TumblrMenu/TransitionManager.swift"
+            timestampString = "502620510.450818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "tabBarController(_:didSelect:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "animateTransition(using:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -53,9 +53,14 @@ class TableViewController: UITableViewController, UITabBarControllerDelegate {
     }
     
     
+    
     // MARK: - TabbarController Delegate
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if let menuController = storyboard?.instantiateViewController(withIdentifier: "MenuViewController"){
+            menuController.transitioningDelegate = TransitionManager()
+            viewController.present(menuController, animated: true, completion: nil)
+        }
         
     }
 
