@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 	}
 	
 	override var preferredStatusBarStyle : UIStatusBarStyle {
-		return UIStatusBarStyle.lightContent
+		return .lightContent
 	}
 	
 	// MARK: - event response
