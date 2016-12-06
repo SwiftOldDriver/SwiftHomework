@@ -45,11 +45,12 @@ class ViewController: UIViewController {
 extension ViewController: UITextViewDelegate {
 	
 	func textViewDidChange(_ textView: UITextView) {
-		characterCountLabel.text = "\(maxTweetCount - (textView.text ?? "").characters.count)"
+		characterCountLabel.text = "\(maxTweetCount - (textView.text ?? "").length)"
 	}
 	
 	func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-		return ((textView.text ?? "").characters.count + (text.characters.count - range.length)) <= maxTweetCount
+		let newTweetCount = (textView.text ?? "").length + (text.length - range.length)
+		return newTweetCount <= maxTweetCount
 	}
 }
 
