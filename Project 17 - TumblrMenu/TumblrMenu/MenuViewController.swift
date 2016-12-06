@@ -16,7 +16,6 @@ class MenuViewController: UIViewController,UIViewControllerTransitioningDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func dismissSelf(_ sender: Any) {

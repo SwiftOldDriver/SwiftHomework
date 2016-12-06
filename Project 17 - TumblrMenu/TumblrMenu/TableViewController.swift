@@ -19,7 +19,6 @@ class TableViewController: UITableViewController, UITabBarControllerDelegate {
         let postImage = UIImage(imageLiteralResourceName: "newPost").withRenderingMode(.alwaysOriginal)
         tabBarItem = UITabBarItem(title: nil, image: postImage, selectedImage: nil)
         tabBarController?.delegate = self
-        
     }
     
     // MARK: - Table view data source

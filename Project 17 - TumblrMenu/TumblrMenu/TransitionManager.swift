@@ -9,8 +9,7 @@
 import UIKit
 
 class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
-    
-    fileprivate var isMenuViewControllerPresenting = false
+    private var isMenuViewControllerPresenting = false
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let container = transitionContext.containerView
