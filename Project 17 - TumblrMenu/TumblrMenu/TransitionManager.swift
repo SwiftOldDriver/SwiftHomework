@@ -9,14 +9,15 @@
 import UIKit
 
 class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
+   
     private var isMenuViewControllerPresenting = false
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let container = transitionContext.containerView
-        let screens : (from: UIViewController, to: UIViewController) = (transitionContext.viewController(forKey: .from)!, transitionContext.viewController(forKey: .to)!)
+        let screens: (from: UIViewController, to: UIViewController) = (transitionContext.viewController(forKey: .from)!, transitionContext.viewController(forKey: .to)!)
         
         let menuViewController = !isMenuViewControllerPresenting ? screens.from as! MenuViewController : screens.to as! MenuViewController
-        let bottomViewController = !isMenuViewControllerPresenting ? screens.to as UIViewController : screens.from as UIViewController
+        let bottomViewController = !isMenuViewControllerPresenting ? screens.to : screens.from
         let menuView = menuViewController.view!
         let bottomView = bottomViewController.view!
         
@@ -42,11 +43,10 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
     }
     
     func offStageMenuController(_ menuViewController: MenuViewController) {
-        
         menuViewController.view.alpha = 0
-        let topRowOffset  : CGFloat = 300
-        let middleRowOffset : CGFloat = 150
-        let bottomRowOffset  : CGFloat = 50
+        let topRowOffset: CGFloat = 300
+        let middleRowOffset: CGFloat = 150
+        let bottomRowOffset: CGFloat = 50
         let offsetArray = [topRowOffset, middleRowOffset, bottomRowOffset]
         
         for index in 0..<3{
@@ -58,7 +58,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
     func onStageMenuController(_ menuViewController: MenuViewController) {
         menuViewController.view.alpha = 1.0
         
-        for index in 0..<3{
+        for index in 0..<3 {
             menuViewController.leftButtons[index].transform = CGAffineTransform.identity
             menuViewController.rightButtons[index].transform = CGAffineTransform.identity
         }
