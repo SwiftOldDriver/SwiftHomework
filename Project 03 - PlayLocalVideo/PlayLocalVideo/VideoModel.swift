@@ -6,8 +6,6 @@
 //  Copyright © 2016年 shifengming. All rights reserved.
 //
 
-import Foundation
-
 struct Video {
     let image: String
     let title: String
