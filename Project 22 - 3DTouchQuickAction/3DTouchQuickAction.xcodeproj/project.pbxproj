@@ -16,6 +16,7 @@
 		CE1D9DEA1DF65C3100433A3A /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9DE91DF65C3100433A3A /* ScanViewController.swift */; };
 		CE1D9DEC1DF65C4F00433A3A /* SwitchWiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9DEB1DF65C4F00433A3A /* SwitchWiFiViewController.swift */; };
 		CE1D9DEF1DF65F4A00433A3A /* StoryBoardExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9DEE1DF65F4A00433A3A /* StoryBoardExt.swift */; };
+		CE1D9E0F1DF6A7FC00433A3A /* UIApplicationShortcutItemExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9E0E1DF6A7FC00433A3A /* UIApplicationShortcutItemExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CE1D9DE91DF65C3100433A3A /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		CE1D9DEB1DF65C4F00433A3A /* SwitchWiFiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchWiFiViewController.swift; sourceTree = "<group>"; };
 		CE1D9DEE1DF65F4A00433A3A /* StoryBoardExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoardExt.swift; sourceTree = "<group>"; };
+		CE1D9E0E1DF6A7FC00433A3A /* UIApplicationShortcutItemExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationShortcutItemExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				CE1D9DE71DF65B8C00433A3A /* RunViewController.swift */,
 				CE1D9DE91DF65C3100433A3A /* ScanViewController.swift */,
 				CE1D9DEB1DF65C4F00433A3A /* SwitchWiFiViewController.swift */,
+				CE1D9E0E1DF6A7FC00433A3A /* UIApplicationShortcutItemExt.swift */,
 			);
 			path = 3DTouchQuickAction;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				CE1D9DEF1DF65F4A00433A3A /* StoryBoardExt.swift in Sources */,
 				CE1D9DE81DF65B8C00433A3A /* RunViewController.swift in Sources */,
 				CE1D9DD61DF65AAC00433A3A /* AppDelegate.swift in Sources */,
+				CE1D9E0F1DF6A7FC00433A3A /* UIApplicationShortcutItemExt.swift in Sources */,
 				CE1D9DEA1DF65C3100433A3A /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +327,7 @@
 				CE1D9DE61DF65AAC00433A3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
