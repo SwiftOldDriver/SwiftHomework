@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE1D9DF81DF66D3B00433A3A"
+               BlueprintIdentifier = "CE1D9DD11DF65AAC00433A3A"
                BuildableName = "3DTouchQuickAction.app"
                BlueprintName = "3DTouchQuickAction"
                ReferencedContainer = "container:3DTouchQuickAction.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE1D9DF81DF66D3B00433A3A"
+            BlueprintIdentifier = "CE1D9DD11DF65AAC00433A3A"
             BuildableName = "3DTouchQuickAction.app"
             BlueprintName = "3DTouchQuickAction"
             ReferencedContainer = "container:3DTouchQuickAction.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE1D9DF81DF66D3B00433A3A"
+            BlueprintIdentifier = "CE1D9DD11DF65AAC00433A3A"
             BuildableName = "3DTouchQuickAction.app"
             BlueprintName = "3DTouchQuickAction"
             ReferencedContainer = "container:3DTouchQuickAction.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE1D9DF81DF66D3B00433A3A"
+            BlueprintIdentifier = "CE1D9DD11DF65AAC00433A3A"
             BuildableName = "3DTouchQuickAction.app"
             BlueprintName = "3DTouchQuickAction"
             ReferencedContainer = "container:3DTouchQuickAction.xcodeproj">

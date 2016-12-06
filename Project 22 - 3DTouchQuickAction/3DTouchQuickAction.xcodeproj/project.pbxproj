@@ -7,25 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE1D9DFD1DF66D3B00433A3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9DFC1DF66D3B00433A3A /* AppDelegate.swift */; };
-		CE1D9DFF1DF66D3B00433A3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9DFE1DF66D3B00433A3A /* ViewController.swift */; };
-		CE1D9E021DF66D3B00433A3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1D9E001DF66D3B00433A3A /* Main.storyboard */; };
-		CE1D9E041DF66D3B00433A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1D9E031DF66D3B00433A3A /* Assets.xcassets */; };
-		CE1D9E071DF66D3B00433A3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1D9E051DF66D3B00433A3A /* LaunchScreen.storyboard */; };
+		CE1D9DD61DF65AAC00433A3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9DD51DF65AAC00433A3A /* AppDelegate.swift */; };
+		CE1D9DD81DF65AAC00433A3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9DD71DF65AAC00433A3A /* ViewController.swift */; };
+		CE1D9DDB1DF65AAC00433A3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1D9DD91DF65AAC00433A3A /* Main.storyboard */; };
+		CE1D9DDD1DF65AAC00433A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1D9DDC1DF65AAC00433A3A /* Assets.xcassets */; };
+		CE1D9DE01DF65AAC00433A3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1D9DDE1DF65AAC00433A3A /* LaunchScreen.storyboard */; };
+		CE1D9DE81DF65B8C00433A3A /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9DE71DF65B8C00433A3A /* RunViewController.swift */; };
+		CE1D9DEA1DF65C3100433A3A /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9DE91DF65C3100433A3A /* ScanViewController.swift */; };
+		CE1D9DEC1DF65C4F00433A3A /* SwitchWiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9DEB1DF65C4F00433A3A /* SwitchWiFiViewController.swift */; };
+		CE1D9DEF1DF65F4A00433A3A /* StoryBoardExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D9DEE1DF65F4A00433A3A /* StoryBoardExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE1D9DF91DF66D3B00433A3A /* 3DTouchQuickAction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTouchQuickAction.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE1D9DFC1DF66D3B00433A3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE1D9DFE1DF66D3B00433A3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE1D9E011DF66D3B00433A3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE1D9E031DF66D3B00433A3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE1D9E061DF66D3B00433A3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CE1D9E081DF66D3B00433A3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE1D9DD21DF65AAC00433A3A /* 3DTouchQuickAction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTouchQuickAction.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1D9DD51DF65AAC00433A3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE1D9DD71DF65AAC00433A3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE1D9DDA1DF65AAC00433A3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE1D9DDC1DF65AAC00433A3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE1D9DDF1DF65AAC00433A3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE1D9DE11DF65AAC00433A3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE1D9DE71DF65B8C00433A3A /* RunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
+		CE1D9DE91DF65C3100433A3A /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		CE1D9DEB1DF65C4F00433A3A /* SwitchWiFiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchWiFiViewController.swift; sourceTree = "<group>"; };
+		CE1D9DEE1DF65F4A00433A3A /* StoryBoardExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoardExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE1D9DF61DF66D3B00433A3A /* Frameworks */ = {
+		CE1D9DCF1DF65AAC00433A3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,45 +43,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE1D9DF01DF66D3B00433A3A = {
+		CE1D9DC91DF65AAC00433A3A = {
 			isa = PBXGroup;
 			children = (
-				CE1D9DFB1DF66D3B00433A3A /* 3DTouchQuickAction */,
-				CE1D9DFA1DF66D3B00433A3A /* Products */,
+				CE1D9DD41DF65AAC00433A3A /* 3DTouchQuickAction */,
+				CE1D9DD31DF65AAC00433A3A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CE1D9DFA1DF66D3B00433A3A /* Products */ = {
+		CE1D9DD31DF65AAC00433A3A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE1D9DF91DF66D3B00433A3A /* 3DTouchQuickAction.app */,
+				CE1D9DD21DF65AAC00433A3A /* 3DTouchQuickAction.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE1D9DFB1DF66D3B00433A3A /* 3DTouchQuickAction */ = {
+		CE1D9DD41DF65AAC00433A3A /* 3DTouchQuickAction */ = {
 			isa = PBXGroup;
 			children = (
-				CE1D9DFC1DF66D3B00433A3A /* AppDelegate.swift */,
-				CE1D9DFE1DF66D3B00433A3A /* ViewController.swift */,
-				CE1D9E001DF66D3B00433A3A /* Main.storyboard */,
-				CE1D9E031DF66D3B00433A3A /* Assets.xcassets */,
-				CE1D9E051DF66D3B00433A3A /* LaunchScreen.storyboard */,
-				CE1D9E081DF66D3B00433A3A /* Info.plist */,
+				CE1D9DED1DF65F3200433A3A /* Extension */,
+				CE1D9DD51DF65AAC00433A3A /* AppDelegate.swift */,
+				CE1D9DD71DF65AAC00433A3A /* ViewController.swift */,
+				CE1D9DD91DF65AAC00433A3A /* Main.storyboard */,
+				CE1D9DDC1DF65AAC00433A3A /* Assets.xcassets */,
+				CE1D9DDE1DF65AAC00433A3A /* LaunchScreen.storyboard */,
+				CE1D9DE11DF65AAC00433A3A /* Info.plist */,
+				CE1D9DE71DF65B8C00433A3A /* RunViewController.swift */,
+				CE1D9DE91DF65C3100433A3A /* ScanViewController.swift */,
+				CE1D9DEB1DF65C4F00433A3A /* SwitchWiFiViewController.swift */,
 			);
 			path = 3DTouchQuickAction;
+			sourceTree = "<group>";
+		};
+		CE1D9DED1DF65F3200433A3A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE1D9DEE1DF65F4A00433A3A /* StoryBoardExt.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE1D9DF81DF66D3B00433A3A /* 3DTouchQuickAction */ = {
+		CE1D9DD11DF65AAC00433A3A /* 3DTouchQuickAction */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE1D9E0B1DF66D3B00433A3A /* Build configuration list for PBXNativeTarget "3DTouchQuickAction" */;
+			buildConfigurationList = CE1D9DE41DF65AAC00433A3A /* Build configuration list for PBXNativeTarget "3DTouchQuickAction" */;
 			buildPhases = (
-				CE1D9DF51DF66D3B00433A3A /* Sources */,
-				CE1D9DF61DF66D3B00433A3A /* Frameworks */,
-				CE1D9DF71DF66D3B00433A3A /* Resources */,
+				CE1D9DCE1DF65AAC00433A3A /* Sources */,
+				CE1D9DCF1DF65AAC00433A3A /* Frameworks */,
+				CE1D9DD01DF65AAC00433A3A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -81,26 +101,26 @@
 			);
 			name = 3DTouchQuickAction;
 			productName = 3DTouchQuickAction;
-			productReference = CE1D9DF91DF66D3B00433A3A /* 3DTouchQuickAction.app */;
+			productReference = CE1D9DD21DF65AAC00433A3A /* 3DTouchQuickAction.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CE1D9DF11DF66D3B00433A3A /* Project object */ = {
+		CE1D9DCA1DF65AAC00433A3A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = nero;
 				TargetAttributes = {
-					CE1D9DF81DF66D3B00433A3A = {
+					CE1D9DD11DF65AAC00433A3A = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = CE1D9DF41DF66D3B00433A3A /* Build configuration list for PBXProject "3DTouchQuickAction" */;
+			buildConfigurationList = CE1D9DCD1DF65AAC00433A3A /* Build configuration list for PBXProject "3DTouchQuickAction" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -108,54 +128,58 @@
 				en,
 				Base,
 			);
-			mainGroup = CE1D9DF01DF66D3B00433A3A;
-			productRefGroup = CE1D9DFA1DF66D3B00433A3A /* Products */;
+			mainGroup = CE1D9DC91DF65AAC00433A3A;
+			productRefGroup = CE1D9DD31DF65AAC00433A3A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE1D9DF81DF66D3B00433A3A /* 3DTouchQuickAction */,
+				CE1D9DD11DF65AAC00433A3A /* 3DTouchQuickAction */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE1D9DF71DF66D3B00433A3A /* Resources */ = {
+		CE1D9DD01DF65AAC00433A3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1D9E071DF66D3B00433A3A /* LaunchScreen.storyboard in Resources */,
-				CE1D9E041DF66D3B00433A3A /* Assets.xcassets in Resources */,
-				CE1D9E021DF66D3B00433A3A /* Main.storyboard in Resources */,
+				CE1D9DE01DF65AAC00433A3A /* LaunchScreen.storyboard in Resources */,
+				CE1D9DDD1DF65AAC00433A3A /* Assets.xcassets in Resources */,
+				CE1D9DDB1DF65AAC00433A3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CE1D9DF51DF66D3B00433A3A /* Sources */ = {
+		CE1D9DCE1DF65AAC00433A3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1D9DFF1DF66D3B00433A3A /* ViewController.swift in Sources */,
-				CE1D9DFD1DF66D3B00433A3A /* AppDelegate.swift in Sources */,
+				CE1D9DEC1DF65C4F00433A3A /* SwitchWiFiViewController.swift in Sources */,
+				CE1D9DD81DF65AAC00433A3A /* ViewController.swift in Sources */,
+				CE1D9DEF1DF65F4A00433A3A /* StoryBoardExt.swift in Sources */,
+				CE1D9DE81DF65B8C00433A3A /* RunViewController.swift in Sources */,
+				CE1D9DD61DF65AAC00433A3A /* AppDelegate.swift in Sources */,
+				CE1D9DEA1DF65C3100433A3A /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE1D9E001DF66D3B00433A3A /* Main.storyboard */ = {
+		CE1D9DD91DF65AAC00433A3A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CE1D9E011DF66D3B00433A3A /* Base */,
+				CE1D9DDA1DF65AAC00433A3A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CE1D9E051DF66D3B00433A3A /* LaunchScreen.storyboard */ = {
+		CE1D9DDE1DF65AAC00433A3A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CE1D9E061DF66D3B00433A3A /* Base */,
+				CE1D9DDF1DF65AAC00433A3A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -163,7 +187,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CE1D9E091DF66D3B00433A3A /* Debug */ = {
+		CE1D9DE21DF65AAC00433A3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +236,7 @@
 			};
 			name = Debug;
 		};
-		CE1D9E0A1DF66D3B00433A3A /* Release */ = {
+		CE1D9DE31DF65AAC00433A3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -254,11 +278,12 @@
 			};
 			name = Release;
 		};
-		CE1D9E0C1DF66D3B00433A3A /* Debug */ = {
+		CE1D9DE51DF65AAC00433A3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 3DTouchQuickAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftdrive.-DTouchQuickAction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -266,11 +291,12 @@
 			};
 			name = Debug;
 		};
-		CE1D9E0D1DF66D3B00433A3A /* Release */ = {
+		CE1D9DE61DF65AAC00433A3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 3DTouchQuickAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftdrive.-DTouchQuickAction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,24 +307,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE1D9DF41DF66D3B00433A3A /* Build configuration list for PBXProject "3DTouchQuickAction" */ = {
+		CE1D9DCD1DF65AAC00433A3A /* Build configuration list for PBXProject "3DTouchQuickAction" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE1D9E091DF66D3B00433A3A /* Debug */,
-				CE1D9E0A1DF66D3B00433A3A /* Release */,
+				CE1D9DE21DF65AAC00433A3A /* Debug */,
+				CE1D9DE31DF65AAC00433A3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE1D9E0B1DF66D3B00433A3A /* Build configuration list for PBXNativeTarget "3DTouchQuickAction" */ = {
+		CE1D9DE41DF65AAC00433A3A /* Build configuration list for PBXNativeTarget "3DTouchQuickAction" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE1D9E0C1DF66D3B00433A3A /* Debug */,
-				CE1D9E0D1DF66D3B00433A3A /* Release */,
+				CE1D9DE51DF65AAC00433A3A /* Debug */,
+				CE1D9DE61DF65AAC00433A3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CE1D9DF11DF66D3B00433A3A /* Project object */;
+	rootObject = CE1D9DCA1DF65AAC00433A3A /* Project object */;
 }
