@@ -21,12 +21,10 @@ extension UIViewController : StoryboardIdentifiable { }
 
 extension UIStoryboard {
     
-    
     // 这里使用大写是为了和StoryBoardName 匹配
     enum Storyboard : String {
         case Main
     }
-    
     
     /// Convenience Initializers
     
@@ -34,18 +32,15 @@ extension UIStoryboard {
         self.init(name: storyboard.rawValue, bundle: bundle)
     }
     
-    
     /// Class Functions
     
     class func storyboard(_ storyboard: Storyboard, bundle: Bundle? = nil) -> UIStoryboard {
         return UIStoryboard(name: storyboard.rawValue, bundle: bundle)
     }
     
-    
 
-    
-    
     func instantiateViewController<T: UIViewController>() -> T where T: StoryboardIdentifiable {
+        
         guard let viewController = self.instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {
             fatalError("Couldn't instantiate view controller with identifier \(T.storyboardIdentifier) ")
         }
