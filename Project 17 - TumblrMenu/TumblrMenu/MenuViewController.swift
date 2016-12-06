@@ -9,17 +9,18 @@
 import UIKit
 
 class MenuViewController: UIViewController,UIViewControllerTransitioningDelegate {
-
-
+    
+    
     @IBOutlet var leftButtons: [UIButton]!
     @IBOutlet var rightButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
+    
     @IBAction func dismissSelf(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-
+    
 }

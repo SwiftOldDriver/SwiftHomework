@@ -9,7 +9,7 @@
 import UIKit
 
 class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
-
+    
     fileprivate var isMenuViewControllerPresenting = false
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -64,7 +64,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
             menuViewController.rightButtons[index].transform = CGAffineTransform.identity
         }
     }
-
+    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 1
     }
