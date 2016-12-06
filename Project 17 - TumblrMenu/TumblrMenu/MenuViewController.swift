@@ -10,12 +10,13 @@ import UIKit
 
 class MenuViewController: UIViewController,UIViewControllerTransitioningDelegate {
     
-    
+    let tansitionDelegate = TransitionManager()
     @IBOutlet var leftButtons: [UIButton]!
     @IBOutlet var rightButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        transitioningDelegate = tansitionDelegate
     }
     
     @IBAction func dismissSelf(_ sender: Any) {

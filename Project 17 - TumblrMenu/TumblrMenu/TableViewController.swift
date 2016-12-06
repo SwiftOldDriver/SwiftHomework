@@ -9,7 +9,7 @@
 import UIKit
 
 class TableViewController: UITableViewController, UITabBarControllerDelegate {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBarItem()
@@ -53,7 +53,6 @@ class TableViewController: UITableViewController, UITabBarControllerDelegate {
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         if let menuController = storyboard?.instantiateViewController(withIdentifier: "MenuViewController"){
-            menuController.transitioningDelegate = TransitionManager()
             viewController.present(menuController, animated: true, completion: nil)
         }
     }
