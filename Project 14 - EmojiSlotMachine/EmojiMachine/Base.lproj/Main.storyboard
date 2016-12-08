@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiMachine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hyperspace" translatesAutoresizingMaskIntoConstraints="NO" id="1zo-Iw-uaF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ND-LC-trp">
+                                <rect key="frame" x="12.5" y="233.5" width="350" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="2cX-aG-dgq"/>
+                                    <constraint firstAttribute="height" constant="200" id="5RX-7d-XSh"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3c-gH-eq6">
+                                <rect key="frame" x="12" y="474.5" width="350" height="45"/>
+                                <color key="backgroundColor" red="0.6705882353" green="1" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Tii-XF-Zht"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                <state key="normal" title="GO"/>
+                                <connections>
+                                    <action selector="goButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edA-dl-nxm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsu-xO-K17">
+                                <rect key="frame" x="12" y="577" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P3c-gH-eq6" firstAttribute="top" secondItem="6ND-LC-trp" secondAttribute="bottom" constant="41" id="3DQ-gF-wF4"/>
+                            <constraint firstAttribute="trailing" secondItem="1zo-Iw-uaF" secondAttribute="trailing" id="3jh-Ke-52e"/>
+                            <constraint firstItem="rsu-xO-K17" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BV2-x1-5cn"/>
+                            <constraint firstItem="6ND-LC-trp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RGV-Ae-ubo"/>
+                            <constraint firstItem="6ND-LC-trp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c7k-Gg-2Ui"/>
+                            <constraint firstItem="1zo-Iw-uaF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e87-Fi-Kvu"/>
+                            <constraint firstItem="P3c-gH-eq6" firstAttribute="width" secondItem="6ND-LC-trp" secondAttribute="width" id="fhi-yh-Hh3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1zo-Iw-uaF" secondAttribute="bottom" id="ghe-Xg-p4Q"/>
+                            <constraint firstItem="P3c-gH-eq6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jAO-ao-DeM"/>
+                            <constraint firstItem="rsu-xO-K17" firstAttribute="top" secondItem="P3c-gH-eq6" secondAttribute="bottom" constant="57.5" id="vzi-Kp-a9L"/>
+                            <constraint firstItem="1zo-Iw-uaF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wbe-g8-buj"/>
+                            <constraint firstItem="rsu-xO-K17" firstAttribute="width" secondItem="P3c-gH-eq6" secondAttribute="width" id="zQ4-Gj-Ek6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emojiPickerView" destination="6ND-LC-trp" id="YPW-hu-jIb"/>
+                        <outlet property="goButton" destination="P3c-gH-eq6" id="XhK-hY-Frk"/>
+                        <outlet property="tipsLabel" destination="rsu-xO-K17" id="fSu-zI-0bQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hyperspace" width="1242" height="2208"/>
+    </resources>
 </document>
