@@ -40,18 +40,26 @@ class ViewController: UITableViewController {
         present(activityViewController, animated: true, completion: nil)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+    private func displayDelete(with indexPath: IndexPath) {
+        dataSource.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+    private func displayDownload(with indexPath: IndexPath) {
+        let downloadAlert = UIAlertController(title: "", message: "Download?", preferredStyle: .alert)
+        downloadAlert.addAction(UIAlertAction(title: "取消", style: .cancel))
+        downloadAlert.addAction(UIAlertAction(title: "确定", style: .default))
+        present(downloadAlert, animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SwipeCellIdentifier, for: indexPath) as! SwipeCell
         let pattern = dataSource[indexPath.row]
-        cell.displayCell(with: pattern)
+        cell.bind(with: pattern)
         return cell
     }
     
@@ -63,12 +71,12 @@ class ViewController: UITableViewController {
         share.backgroundColor = .red
         
         let download = UITableViewRowAction(style: .normal, title: "⬇️\nDownload") { action, index in
-            print("Download button tapped")
+            self.displayDownload(with: index)
         }
         download.backgroundColor = .blue
         
         let delete = UITableViewRowAction(style: .normal, title: "🗑\nDelete") { action, index in
-            print("Delete button tapped")
+            self.displayDelete(with: index)
         }
         delete.backgroundColor = .gray
         

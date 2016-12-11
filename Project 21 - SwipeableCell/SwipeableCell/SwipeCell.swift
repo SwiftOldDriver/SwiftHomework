@@ -8,17 +8,13 @@
 
 import UIKit
 
-struct Pattern {
-    let imageName: String
-    let name: String
-}
 
 class SwipeCell: UITableViewCell {
     
     @IBOutlet weak var patternImageView: UIImageView!
     @IBOutlet weak var patternNameLabel: UILabel!
     
-    func displayCell(with pattern: Pattern) {
+    func bind(with pattern: Pattern) {
         patternNameLabel.text = pattern.name
         if let image = UIImage(named: pattern.imageName)  {
             patternImageView.image = image
