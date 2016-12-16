@@ -10,54 +10,54 @@ import UIKit
 
 class ViewController: UICollectionViewController {
 
-    private struct Storyboard {
-        static let CellIdentifier = "AnimationCollectionViewCell"
-        static let NibName = "AnimationCollectionViewCell"
-    }
-    
-    private let animationModelCollection = AnimationModelCollection()
+    private let CellIdentifier = "AnimationCollectionViewCell"
+    private let NibName = "AnimationCollectionViewCell"
+    private let animations = AnimationModelCollection()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.register(UINib.init(nibName: Storyboard.NibName, bundle: nil), forCellWithReuseIdentifier: Storyboard.CellIdentifier)
+        collectionView?.register(UINib.init(nibName: NibName, bundle: nil), forCellWithReuseIdentifier: CellIdentifier)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.CellIdentifier, for: indexPath) as? AnimationCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier, for: indexPath) as? AnimationCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.bind(model: animationModelCollection[indexPath.row])
+        cell.bind(model: animations[indexPath.row])
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return animationModelCollection.count
+        return animations.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? AnimationCollectionViewCell else {
             return
         }
-        cellSelectedHandle(collectionView, cell: cell)
-    }
-    
-    private func cellSelectedHandle(_ collectionView: UICollectionView, cell: AnimationCollectionViewCell) {
         cell.cellSelectedHandle()
         cell.backBtnTapped = {
-            () -> Void in
             guard let indexPaths = collectionView.indexPathsForSelectedItems else {
                 return
             }
             collectionView.isScrollEnabled = true
             collectionView.reloadItems(at: indexPaths)
         }
-        let animations: () -> Void = {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: {
             cell.frame = collectionView.bounds
-        }
-        let completion: (Bool) -> Void = { _ in
+        }, completion: { _ in
             collectionView.isScrollEnabled = false
-        }
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: animations, completion: completion)
+        })
     }
 
+}
+
+extension AnimationCollectionViewCell {
+    
+    func bind(model: AnimationModel) {
+        backBtn.isHidden = true
+        contentImageView.image = UIImage(named: model.imagePath)
+        contentTextView.isScrollEnabled = false
+    }
+    
 }

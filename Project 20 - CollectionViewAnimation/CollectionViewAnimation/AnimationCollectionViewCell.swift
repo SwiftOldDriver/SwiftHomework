@@ -10,17 +10,11 @@ import UIKit
 
 class AnimationCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak private var contentImageView: UIImageView!
-    @IBOutlet weak private var contentTextView: UITextView!
-    @IBOutlet weak private var backBtn: UIButton!
+    @IBOutlet weak var contentImageView: UIImageView!
+    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var backBtn: UIButton!
 
     var backBtnTapped: (() -> Void)?
-    
-    func bind(model: AnimationModel) {
-        backBtn.isHidden = true
-        contentImageView.image = UIImage(named: model.imagePath)
-        contentTextView.isScrollEnabled = false
-    }
     
     func cellSelectedHandle() {
         backBtn.isHidden = false
