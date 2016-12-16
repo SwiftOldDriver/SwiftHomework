@@ -9,11 +9,11 @@
 
 import UIKit
 
-private let SwipeCellIdentifier = "SwipeCellIdentifier"
 
 class ViewController: UITableViewController {
     
-    private var dataSource = [Pattern]()
+    private let SwipeCellIdentifier = "SwipeCellIdentifier"
+    private var patterns = [Pattern]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class ViewController: UITableViewController {
     }
     
     private func configDataSource() {
-        dataSource = [
+        patterns = [
             Pattern(imageName: "image_1", name: "Pattern Building"),
             Pattern(imageName: "image_2", name: "Joe Beez"),
             Pattern(imageName: "image_3", name: "Car It's car"),
@@ -41,7 +41,7 @@ class ViewController: UITableViewController {
     }
     
     private func displayDelete(with indexPath: IndexPath) {
-        dataSource.remove(at: indexPath.row)
+        patterns.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .fade)
     }
     
@@ -53,30 +53,36 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return patterns.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SwipeCellIdentifier, for: indexPath) as! SwipeCell
-        let pattern = dataSource[indexPath.row]
-        cell.bind(with: pattern)
+        let pattern = patterns[indexPath.row]
+        bind(cell: cell, with: pattern)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let share = UITableViewRowAction(style: .normal, title: "🤗\nShare") { (rowAction, indexPath) in
-            let item = self.dataSource[indexPath.row]
-            self.dispalyShare(with: item)
+        let share = UITableViewRowAction(style: .normal, title: "🤗\nShare") { [weak self] (rowAction, indexPath) in
+            if let `self` = self {
+                let item = self.patterns[indexPath.row]
+                self.dispalyShare(with: item)
+            }
         }
         share.backgroundColor = .red
         
-        let download = UITableViewRowAction(style: .normal, title: "⬇️\nDownload") { action, index in
-            self.displayDownload(with: index)
+        let download = UITableViewRowAction(style: .normal, title: "⬇️\nDownload") { [weak self] action, index in
+            if let `self` = self {
+                self.displayDownload(with: index)
+            }
         }
         download.backgroundColor = .blue
         
-        let delete = UITableViewRowAction(style: .normal, title: "🗑\nDelete") { action, index in
-            self.displayDelete(with: index)
+        let delete = UITableViewRowAction(style: .normal, title: "🗑\nDelete") { [weak self] action, index in
+            if let `self` = self {
+                self.displayDelete(with: index)
+            }
         }
         delete.backgroundColor = .gray
         
@@ -91,3 +97,15 @@ class ViewController: UITableViewController {
     }
     
 }
+
+fileprivate extension ViewController {
+    
+    func bind(cell: SwipeCell, with pattern: Pattern) {
+        cell.patternNameLabel.text = pattern.name
+        if let image = UIImage(named: pattern.imageName)  {
+            cell.patternImageView.image = image
+        }
+    }
+    
+}
+

@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal struct Pattern {
+struct Pattern {
     let imageName: String
     let name: String
 }
