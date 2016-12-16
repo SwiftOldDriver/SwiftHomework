@@ -12,6 +12,10 @@
 		8049F9621DEDAC3100D8BDE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8049F9601DEDAC3100D8BDE9 /* Main.storyboard */; };
 		8049F9641DEDAC3100D8BDE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8049F9631DEDAC3100D8BDE9 /* Assets.xcassets */; };
 		8049F9671DEDAC3100D8BDE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8049F9651DEDAC3100D8BDE9 /* LaunchScreen.storyboard */; };
+		80B1D4101DF58659000E5CBC /* AnimationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1D40E1DF58659000E5CBC /* AnimationCollectionViewCell.swift */; };
+		80B1D4111DF58659000E5CBC /* AnimationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B1D40F1DF58659000E5CBC /* AnimationCollectionViewCell.xib */; };
+		80B1D4131DF58CC2000E5CBC /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1D4121DF58CC2000E5CBC /* AnimationModel.swift */; };
+		80B1D4151DF58D4E000E5CBC /* AnimationModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1D4141DF58D4E000E5CBC /* AnimationModelCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		8049F9631DEDAC3100D8BDE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8049F9661DEDAC3100D8BDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8049F9681DEDAC3100D8BDE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80B1D40E1DF58659000E5CBC /* AnimationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationCollectionViewCell.swift; sourceTree = "<group>"; };
+		80B1D40F1DF58659000E5CBC /* AnimationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationCollectionViewCell.xib; sourceTree = "<group>"; };
+		80B1D4121DF58CC2000E5CBC /* AnimationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
+		80B1D4141DF58D4E000E5CBC /* AnimationModelCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationModelCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +62,15 @@
 		8049F95B1DEDAC3100D8BDE9 /* CollectionViewAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				80B1D4121DF58CC2000E5CBC /* AnimationModel.swift */,
+				80B1D4141DF58D4E000E5CBC /* AnimationModelCollection.swift */,
+				80B1D40E1DF58659000E5CBC /* AnimationCollectionViewCell.swift */,
+				80B1D40F1DF58659000E5CBC /* AnimationCollectionViewCell.xib */,
 				8049F95C1DEDAC3100D8BDE9 /* AppDelegate.swift */,
 				8049F95E1DEDAC3100D8BDE9 /* ViewController.swift */,
 				8049F9601DEDAC3100D8BDE9 /* Main.storyboard */,
-				8049F9631DEDAC3100D8BDE9 /* Assets.xcassets */,
 				8049F9651DEDAC3100D8BDE9 /* LaunchScreen.storyboard */,
+				8049F9631DEDAC3100D8BDE9 /* Assets.xcassets */,
 				8049F9681DEDAC3100D8BDE9 /* Info.plist */,
 			);
 			path = CollectionViewAnimation;
@@ -127,6 +139,7 @@
 				8049F9671DEDAC3100D8BDE9 /* LaunchScreen.storyboard in Resources */,
 				8049F9641DEDAC3100D8BDE9 /* Assets.xcassets in Resources */,
 				8049F9621DEDAC3100D8BDE9 /* Main.storyboard in Resources */,
+				80B1D4111DF58659000E5CBC /* AnimationCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B1D4131DF58CC2000E5CBC /* AnimationModel.swift in Sources */,
+				80B1D4151DF58D4E000E5CBC /* AnimationModelCollection.swift in Sources */,
 				8049F95F1DEDAC3100D8BDE9 /* ViewController.swift in Sources */,
 				8049F95D1DEDAC3100D8BDE9 /* AppDelegate.swift in Sources */,
+				80B1D4101DF58659000E5CBC /* AnimationCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +318,7 @@
 				8049F96D1DEDAC3100D8BDE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
