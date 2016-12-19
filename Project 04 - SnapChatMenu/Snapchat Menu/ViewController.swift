@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    var cameraViewController: CameraViewController!
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
     
     private func configScrollView() {
         let leftViewController: LeftViewController = LeftViewController(nibName: "LeftViewController", bundle: nil)
-        let cameraViewController: CameraViewController = CameraViewController(nibName: "CameraViewController", bundle: nil)
+        cameraViewController = CameraViewController(nibName: "CameraViewController", bundle: nil)
         let rightViewController: RightViewController = RightViewController(nibName: "RightViewController", bundle: nil)
         
         addChildViewController(leftViewController)
@@ -43,6 +44,15 @@ class ViewController: UIViewController {
         itemFrame.origin.x = 2 * view.frame.width
         rightViewController.view.frame = itemFrame
         scrollView.contentSize = CGSize(width: view.frame.width * 3, height: view.frame.size.height)
+        scrollView.delegate = self
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetX = scrollView.contentOffset.x
+        let cameraViewShowing = offsetX > 0 && offsetX < view.frame.width * 2
+        if cameraViewShowing != cameraViewController.showing {
+            cameraViewController.showing = cameraViewShowing
+        }
     }
 
 }

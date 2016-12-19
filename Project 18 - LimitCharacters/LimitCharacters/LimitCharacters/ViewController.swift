@@ -9,17 +9,86 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+	
+	// MARK: - view & variable
+	@IBOutlet weak var bottomUIView: UIView!
+	@IBOutlet weak var characterCountLabel: UILabel!
+	fileprivate let maxTweetCount = 140
+	
+	// MARK: - life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		registerKeyBoardObserver()
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	
+	override var preferredStatusBarStyle : UIStatusBarStyle {
+		return .lightContent
 	}
+	
+	// MARK: - event response
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		view.endEditing(true)
+	}
+	
+	@IBAction func closeButtonClick() {
+		// cancel KeyBoardObserver after dismiss
+		cancelKeyBoardObserver()
+	}
+	
+	@IBAction func tweetButtonClick() {
+		// cancel KeyBoardObserver after dismiss
+		cancelKeyBoardObserver()
+	}
+}
 
+// MARK: - UITextViewDelegate
+extension ViewController: UITextViewDelegate {
+	
+	func textViewDidChange(_ textView: UITextView) {
+		characterCountLabel.text = "\(maxTweetCount - (textView.text ?? "").length)"
+	}
+	
+	func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+		let newTweetCount = (textView.text ?? "").length + (text.length - range.length)
+		return newTweetCount <= maxTweetCount
+	}
+}
 
+// MARK: - KeyboardNotification
+extension ViewController {
+	
+	fileprivate func registerKeyBoardObserver(){
+		NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillShow(_:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+		NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+	}
+	
+	fileprivate func cancelKeyBoardObserver(){
+		view.endEditing(true)
+		NotificationCenter.default.removeObserver(self, name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+		NotificationCenter.default.removeObserver(self, name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+	}
+	
+	func keyboardWillShow(_ notification:Notification) {
+		guard let userInfo  = notification.userInfo else { return }
+		guard let keyBoardBounds = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue,
+			let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber,
+			let optionRawValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber
+			else { return }
+		
+		UIView.animate(withDuration: duration.doubleValue,delay: 0,options:UIViewAnimationOptions(rawValue: UInt(optionRawValue.intValue << 16)),animations: {
+			self.bottomUIView.transform = CGAffineTransform(translationX: 0,y: -keyBoardBounds.cgRectValue.size.height)
+		},completion: nil)
+	}
+	
+	func keyboardWillHide(_ notification:Notification) {
+		guard let userInfo  = notification.userInfo else { return }
+		guard let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber,
+			let optionRawValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber
+			else { return }
+		
+		UIView.animate(withDuration: duration.doubleValue,delay: 0,options:UIViewAnimationOptions(rawValue: UInt(optionRawValue.intValue << 16)),animations: {
+			self.bottomUIView.transform = CGAffineTransform.identity
+		},completion: nil)
+	}
 }
 
