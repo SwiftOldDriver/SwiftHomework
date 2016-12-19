@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="AnimationCollectionViewCell" customModule="CollectionViewAnimation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="207"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="207"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CO7-YJ-0QF">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="140"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="140" id="2j0-xt-plH"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c35-CA-sLC">
+                        <rect key="frame" x="0.0" y="140" width="340" height="67"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <string key="text">Hedge fund billionaire Bill Ackman was humbled in 2015. His Pershing Square Capital Management had a terrible year, posting a -19.3% gross return.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ft0-1b-J2n">
+                        <rect key="frame" x="8" y="18" width="20" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="Ztt-bd-BT3"/>
+                            <constraint firstAttribute="height" constant="24" id="nZa-Rw-Lyz"/>
+                        </constraints>
+                        <state key="normal" image="back"/>
+                        <connections>
+                            <action selector="backAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="BpN-rF-KxU"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="c35-CA-sLC" secondAttribute="trailing" id="4ut-JU-3dH"/>
+                <constraint firstAttribute="trailing" secondItem="CO7-YJ-0QF" secondAttribute="trailing" id="Ho6-B2-NO3"/>
+                <constraint firstItem="Ft0-1b-J2n" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="18" id="MWg-zg-tzV"/>
+                <constraint firstAttribute="bottom" secondItem="c35-CA-sLC" secondAttribute="bottom" id="Rn5-jv-vl9"/>
+                <constraint firstItem="CO7-YJ-0QF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ztn-mg-4xV"/>
+                <constraint firstItem="c35-CA-sLC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eTk-vf-5Pf"/>
+                <constraint firstItem="Ft0-1b-J2n" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="gRF-cK-LGw"/>
+                <constraint firstItem="c35-CA-sLC" firstAttribute="top" secondItem="CO7-YJ-0QF" secondAttribute="bottom" id="o24-8x-ufE"/>
+                <constraint firstItem="CO7-YJ-0QF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yUs-nK-mtF"/>
+            </constraints>
+            <connections>
+                <outlet property="backBtn" destination="Ft0-1b-J2n" id="era-Kn-eX8"/>
+                <outlet property="contentImageView" destination="CO7-YJ-0QF" id="1Rj-E5-wk7"/>
+                <outlet property="contentTextView" destination="c35-CA-sLC" id="lx7-fP-L90"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="53.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="back" width="64" height="64"/>
+    </resources>
+</document>

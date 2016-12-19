@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class CameraViewController: UIViewController, UIGestureRecognizerDelegate {
+class CameraViewController: UIViewController {
     
     @IBOutlet private weak var cameraView: UIView!
     @IBOutlet private weak var tempImageView: UIImageView!
@@ -20,6 +20,21 @@ class CameraViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private var didTakePhoto = false
     
+    var showing = false{
+        willSet {
+            if newValue == showing {
+                return
+            }
+            if newValue {
+                captureSession.startRunning()
+                print("start running")
+            }else{
+                captureSession.stopRunning()
+                print("stop running")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configRecognizer()
@@ -27,12 +42,11 @@ class CameraViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     private func configRecognizer() {
-        let gesture = UITapGestureRecognizer.init(target: self, action: #selector(didPressTakeAnother))
-        gesture.delegate = self
+        let gesture = UITapGestureRecognizer.init(target: self, action: #selector(didTouchScreen))
         view.addGestureRecognizer(gesture)
     }
     
-    func didPressTakeAnother() {
+    func didTouchScreen() {
         if !isCameraAvailable() {
             return
         }
@@ -40,9 +54,8 @@ class CameraViewController: UIViewController, UIGestureRecognizerDelegate {
             tempImageView.isHidden = true
             didTakePhoto = false
         } else {
-            captureSession.startRunning()
             didTakePhoto = true
-            didPressTakePhoto()
+            takePhoto()
         }
     }
     
@@ -70,10 +83,9 @@ class CameraViewController: UIViewController, UIGestureRecognizerDelegate {
         previewLayer.videoGravity = AVLayerVideoGravityResizeAspect
         previewLayer.connection.videoOrientation = AVCaptureVideoOrientation.portrait
         cameraView.layer.addSublayer(previewLayer)
-        captureSession.startRunning()
     }
     
-    private func didPressTakePhoto() {
+    private func takePhoto() {
         guard let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo) else {
             return
         }

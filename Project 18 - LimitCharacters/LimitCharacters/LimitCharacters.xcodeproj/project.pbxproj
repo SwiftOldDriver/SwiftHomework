@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E42CFB841DF6A1BF006070D9 /* String+LimitCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42CFB831DF6A1BF006070D9 /* String+LimitCharacters.swift */; };
 		E4F492D31DED2E55008CD280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F492D21DED2E55008CD280 /* AppDelegate.swift */; };
 		E4F492D51DED2E55008CD280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F492D41DED2E55008CD280 /* ViewController.swift */; };
 		E4F492D81DED2E55008CD280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F492D61DED2E55008CD280 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E42CFB831DF6A1BF006070D9 /* String+LimitCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+LimitCharacters.swift"; sourceTree = "<group>"; };
 		E4F492CF1DED2E55008CD280 /* LimitCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LimitCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F492D21DED2E55008CD280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4F492D41DED2E55008CD280 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E42CFB821DF6A1A4006070D9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E42CFB831DF6A1BF006070D9 /* String+LimitCharacters.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		E4F492C61DED2E55008CD280 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		E4F492D11DED2E55008CD280 /* LimitCharacters */ = {
 			isa = PBXGroup;
 			children = (
+				E42CFB821DF6A1A4006070D9 /* Extension */,
 				E4F492D21DED2E55008CD280 /* AppDelegate.swift */,
 				E4F492D41DED2E55008CD280 /* ViewController.swift */,
 				E4F492D61DED2E55008CD280 /* Main.storyboard */,
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F492D51DED2E55008CD280 /* ViewController.swift in Sources */,
+				E42CFB841DF6A1BF006070D9 /* String+LimitCharacters.swift in Sources */,
 				E4F492D31DED2E55008CD280 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +312,7 @@
 				E4F492E31DED2E55008CD280 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

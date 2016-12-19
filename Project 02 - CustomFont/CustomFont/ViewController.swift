@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var data = ["30 Days Swift",
+    let data = ["30 Days Swift",
                 "这些字体特别适合打「奋斗」和「理想」",
                 "谢谢「造字工房」，本案例不涉及商业使用",
                 "使用到造字工房劲黑体，致黑体，童心体",
@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 "Alex",
                 "@@@@@@"]
     
-    var fontNames = ["MFTongXin_Noncommercial-Regular",
+    let fontNames = ["MFTongXin_Noncommercial-Regular",
                      "MFJinHei_Noncommercial-Regular",
                      "MFZhiHei_Noncommercial-Regular",
                      "edundot",
@@ -30,7 +30,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var changeFontButton: UIButton!
     @IBOutlet weak var fontTableView: UITableView!
-    
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -49,7 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
         
-        changeFontButton.layer.cornerRadius = changeFontButton.frame.size.width/2
+        changeFontButton.layer.cornerRadius = changeFontButton.frame.width / 2
     }
     
     //固定高度可以直接设置tableView.rowHeight，在storyboard里面设置了
