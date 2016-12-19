@@ -14,18 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
-
-        let maskImage = LaunchView(frame: window!.frame)
-        window?.addSubview(maskImage)
-
-        window?.backgroundColor = UIColor(red: 0.117, green: 0.631, blue: 0.949, alpha: 1)
-        window?.makeKeyAndVisible()
+        window = initalizeWindow()
         UIApplication.shared.isStatusBarHidden = true
-        
+
         return true
+    }
+
+    private func initalizeWindow() -> UIWindow {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.backgroundColor = UIColor(red: 0.117, green: 0.631, blue: 0.949, alpha: 1)
+        window.rootViewController = ViewController()
+        window.makeKeyAndVisible()
+
+        let maskView = LaunchView(frame: window.frame)
+        window.addSubview(maskView)
+
+        return window
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
