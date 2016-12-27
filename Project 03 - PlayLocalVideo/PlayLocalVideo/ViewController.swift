@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,3 +60,10 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
+fileprivate extension VideoCell {
+    func bind(video: Video) {
+        videoScreenshot.image = UIImage(named: video.image)
+        videoTitleLabel.text = video.title
+        videoSourceLabel.text = video.source
+    }
+}

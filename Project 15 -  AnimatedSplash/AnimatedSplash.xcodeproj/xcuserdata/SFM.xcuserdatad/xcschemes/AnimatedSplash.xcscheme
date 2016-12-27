@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8216C6401DED28140046B8BF"
+               BlueprintIdentifier = "821A146A1DF6840E001215BE"
                BuildableName = "AnimatedSplash.app"
                BlueprintName = "AnimatedSplash"
                ReferencedContainer = "container:AnimatedSplash.xcodeproj">
@@ -28,31 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8216C6541DED28140046B8BF"
-               BuildableName = "AnimatedSplashTests.xctest"
-               BlueprintName = "AnimatedSplashTests"
-               ReferencedContainer = "container:AnimatedSplash.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8216C65F1DED28140046B8BF"
-               BuildableName = "AnimatedSplashUITests.xctest"
-               BlueprintName = "AnimatedSplashUITests"
-               ReferencedContainer = "container:AnimatedSplash.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8216C6401DED28140046B8BF"
+            BlueprintIdentifier = "821A146A1DF6840E001215BE"
             BuildableName = "AnimatedSplash.app"
             BlueprintName = "AnimatedSplash"
             ReferencedContainer = "container:AnimatedSplash.xcodeproj">
@@ -75,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8216C6401DED28140046B8BF"
+            BlueprintIdentifier = "821A146A1DF6840E001215BE"
             BuildableName = "AnimatedSplash.app"
             BlueprintName = "AnimatedSplash"
             ReferencedContainer = "container:AnimatedSplash.xcodeproj">
@@ -94,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8216C6401DED28140046B8BF"
+            BlueprintIdentifier = "821A146A1DF6840E001215BE"
             BuildableName = "AnimatedSplash.app"
             BlueprintName = "AnimatedSplash"
             ReferencedContainer = "container:AnimatedSplash.xcodeproj">

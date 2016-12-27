@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  AnimatedSplash
 //
-//  Created by PixelShi on 2016/11/29.
+//  Created by PixelShi on 2016/12/6.
 //  Copyright © 2016年 shifengming. All rights reserved.
 //
 
